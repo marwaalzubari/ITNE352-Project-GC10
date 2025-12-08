@@ -1,51 +1,94 @@
 import socket
 import threading 
+import requests
+import json 
+
+
 SERVER_ADDR=("127.0.0.1",50555)
-server_socket=socket.socket(family=socket.AF_INET,type= socket.SOCK_STREAM)
-server_socket.bind(SERVER_ADDR)
-server_socket.listen(5)
-print(f"Server is listening on {SERVER_ADDR}...")
+API_KEY = "ae701edbf7d847d4bb8de291a026194d"
+
+
+
+#Top Headlines function for request 1
+def get_top_headlines():
+    url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+    return data
+  
+# function search depanding on keyword for request 2 
+def search_news(keyword):
+    url = f"https://newsapi.org/v2/everything?q={keyword}&apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+    return data
+
+# function to save JSON to file for request 3 
+def save_json(data, filename="saved_news.json"):
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)
+
 
 # function to handle each client 
 def handle_client(conn, addr):
+    print(f"[NEW CONNECTION] {addr} connected.")
     name = conn.recv(1024).decode()
     print(f"[NEW USER] {name} connected.")
+    last_result = None
     
     while True:
-    request = conn.recv(1024).decode()
-
-    if request == "1":
-        # get top headlines
-    elif request == "2":
-        # search news
-    elif request == "3":
-        # save as JSON
-    elif request == "4":
-        # send JSON file back
-    elif request == "quit":
-        break
-
+        request = conn.recv(1024).decode()
         
-            
-    
+        if request == "1":
+            # top headlines
+            news = get_top_headlines()
+            last_result = news
+            conn.sendall(json.dumps(news).encode())
 
+        elif request == "2":
+            #search news 
+            keyword = conn.recv(1024).decode()
+            news = search_news(keyword)
+            last_result = news
+            conn.sendall(json.dumps(news).encode())
 
-    print(f"[NEW CONNECTION] {addr} connected.")
+        elif request == "3":
+            # save as JSON
+            if last_result:
+                save_json(last_result)
+                conn.sendall(b"JSON saved successfully!")
+            else:
+                conn.sendall(b"No data to save!")
 
-    while True:
-        data = conn.recv(1024)
-        if not data:
+        elif request == "4":
+            # send JSON file back
+            try:
+                with open("saved_news.json", "r", encoding="utf-8") as f:
+                    content = f.read()
+                conn.sendall(content.encode())
+            except:
+                conn.sendall(b"No saved JSON found!")
+
+        elif request.lower() == "quit":
             break
-        print(f"[{addr}] {data.decode('ascii')}")
-        conn.sendall(b"Message received")
 
     conn.close()
-    print(f"[DISCONNECTED] {addr}")
-    
-    #loop accept multi clients and make a thread for each one   
-while True:
-    conn, addr = server_socket.accept()
-    thread = threading.Thread(target=handle_client, args=(conn, addr))
-    thread.start()
+    print(f"[DISCONNECTED] {name}")
 
-    print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
+
+# function to start the server 
+def start_server():
+    server_socket = socket.socket(family=socket.AF_INET, type= socket.SOCK_STREAM)
+    server_socket.bind(SERVER_ADDR)
+    server_socket.listen(5)
+   
+    print(f"Server is listening on {SERVER_ADDR}...")
+
+    while True:
+        conn, addr = server_socket.accept()
+        thread = threading.Thread(target=handle_client, args=(conn, addr))
+        thread.start()
+        print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")  
+
+
+start_server()
