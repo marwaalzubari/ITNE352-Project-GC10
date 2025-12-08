@@ -8,6 +8,28 @@ print(f"Server is listening on {SERVER_ADDR}...")
 
 # function to handle each client 
 def handle_client(conn, addr):
+    name = conn.recv(1024).decode()
+    print(f"[NEW USER] {name} connected.")
+    
+    while True:
+    request = conn.recv(1024).decode()
+
+    if request == "1":
+        # get top headlines
+    elif request == "2":
+        # search news
+    elif request == "3":
+        # save as JSON
+    elif request == "4":
+        # send JSON file back
+    elif request == "quit":
+        break
+
+        
+            
+    
+
+
     print(f"[NEW CONNECTION] {addr} connected.")
 
     while True:
