@@ -40,6 +40,8 @@ def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
     name = conn.recv(1024).decode()
     print(f"[NEW USER] {name} connected.")
+    conn.sendall(b"Welcome to the News Server!")
+
     last_result = None
     
     while True:
@@ -77,6 +79,9 @@ def handle_client(conn, addr):
 
         elif request.lower() == "quit":
             break
+        else:
+           conn.sendall(b"Invalid request. Please choose 1, 2, 3, 4, or quit.")
+
 
     conn.close()
     print(f"[DISCONNECTED] {name}")
