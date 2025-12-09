@@ -12,16 +12,22 @@ API_KEY = "ae701edbf7d847d4bb8de291a026194d"
 #Top Headlines function for request 1
 def get_top_headlines():
     url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
-    response = requests.get(url)
-    data = response.json()
-    return data
-  
+    try:
+        response = requests.get(url, timeout=5)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        return {"error": "Failed to fetch headlines", "details": str(e)}
+
 # function search depanding on keyword for request 2 
 def search_news(keyword):
     url = f"https://newsapi.org/v2/everything?q={keyword}&apiKey={API_KEY}"
-    response = requests.get(url)
-    data = response.json()
-    return data
+    try:
+        response = requests.get(url, timeout=5)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        return {"error": "Failed to fetch headlines", "details": str(e)}
 
 # function to save JSON to file for request 3 
 def save_json(data, filename="saved_news.json"):
@@ -92,5 +98,5 @@ def start_server():
 
 
 start_server()
-start_server()
+
 
