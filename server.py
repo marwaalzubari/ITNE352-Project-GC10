@@ -30,23 +30,29 @@ def search_news(keyword):
         return {"error": "Failed to fetch headlines", "details": str(e)}
 
 # function to save JSON to file for request 3 
-def save_json(data, filename="saved_news.json"):
+def save_json_for_client(data, client_name, option_id, group_id="GC10"):
+    filename = f"{client_name}_{option_id}_{group_id}.json"
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
-
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    return filename
 
 # function to handle each client 
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
     name = conn.recv(1024).decode()
     print(f"[NEW USER] {name} connected.")
-    conn.sendall(b"Welcome to the News Server!")
-
     last_result = None
     
     while True:
-        request = conn.recv(1024).decode()
+        try:
+            request = conn.recv(1024).decode()
+        except:
+            # client closed connection suddenly
+            break
         
+        if not request:
+            break
+
         if request == "1":
             # top headlines
             news = get_top_headlines()
@@ -54,8 +60,12 @@ def handle_client(conn, addr):
             conn.sendall(json.dumps(news).encode())
 
         elif request == "2":
-            #search news 
-            keyword = conn.recv(1024).decode()
+            # search news 
+            try:
+                keyword = conn.recv(1024).decode()
+            except:
+                break
+
             news = search_news(keyword)
             last_result = news
             conn.sendall(json.dumps(news).encode())
@@ -79,12 +89,13 @@ def handle_client(conn, addr):
 
         elif request.lower() == "quit":
             break
+
         else:
-           conn.sendall(b"Invalid request. Please choose 1, 2, 3, 4, or quit.")
-
-
+            conn.sendall(b"Invalid request. Choose 1, 2, 3, 4, or quit.")
+    
     conn.close()
     print(f"[DISCONNECTED] {name}")
+
 
 
 # function to start the server 
@@ -104,4 +115,15 @@ def start_server():
 
 start_server()
 
+def make_headlines_list(api_json, limit=15):
+    items = api_json.get("articles", [])[:limit]
+    brief_list = []
+    for i, art in enumerate(items, start=1):
+        brief_list.append({
+            "index": i,
+            "source": art.get("source", {}).get("name"),
+            "author": art.get("author"),
+            "title": art.get("title")
+        })
+    return brief_list, items  # brief for list, items for full details
 
