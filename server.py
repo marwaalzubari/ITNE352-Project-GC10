@@ -9,15 +9,33 @@ API_KEY = "ae701edbf7d847d4bb8de291a026194d"
 
 
 
-#Top Headlines function for request 1
-def get_top_headlines():
-    url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
+#---- (Top Headlines function for request 1) ----#
+
+def get_top_headlines(limit=15 , country="us"):
+    url = f"https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}"
     try:
+        #send the request with timeout to avoid blocking the server 
         response = requests.get(url, timeout=5)
         response.raise_for_status()
-        return response.json()
+        data= response.json()
+        # check if the response are valid 
+        if data.get("status")!="ok":
+            return{"error":"non-ok status","details":data}
+        #to limit the number of articles (15)
+        articles= data.get("articles",[])[:limit]
+        #bulid shortcut for each element 
+        short=[]
+        for a in articles:
+            short.append({
+                "source": a.get("source", {}).get("name"),
+                "author": a.get("author"),
+                "title": a.get("title")  
+            })
+            return{"status":"ok","totalResults": data.get("totalResults"), "articles": short}
+        #to handle errors
     except Exception as e:
         return {"error": "Failed to fetch headlines", "details": str(e)}
+    
 
 # function search depanding on keyword for request 2 
 def search_news(keyword):
@@ -39,13 +57,14 @@ def save_json_for_client(data, client_name, option_id, group_id="GC10"):
 # function to handle each client 
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
-    name = conn.recv(1024).decode()
+    name = conn.recv(1024).decode().strip()
     print(f"[NEW USER] {name} connected.")
     last_result = None
+    last_result_brief = None
     
     while True:
         try:
-            request = conn.recv(1024).decode()
+            request = conn.recv(1024).decode().strip()
         except:
             # client closed connection suddenly
             break
@@ -56,9 +75,27 @@ def handle_client(conn, addr):
         if request == "1":
             # top headlines
             news = get_top_headlines()
-            last_result = news
-            conn.sendall(json.dumps(news).encode())
+            brief,full=make_headlines_list(news,limit=15)
+            last_result_full=full
+            last_result_brief=brief
+            
+            send_with_len(conn,json.dumps({"list":brief}).encode("utf-8"))
+           
 
+            sel_data=recv_with_len(conn)
+            if not sel_Data:
+                break
+            sel=sel_data.decode().strip()
+            if sel.lower()=="back":
+                continue
+            try:
+                idx = int(sel) - 1
+                details = full[idx]
+                send_with_len(conn, json.dumps({"details": details}).encode("utf-8"))
+                
+                save_json_for_client(details, name, "1")
+            except Exception as e:
+                send_with_len(conn, json.dumps({"error": str(e)}).encode("utf-8"))
         elif request == "2":
             # search news 
             try:
@@ -127,3 +164,6 @@ def make_headlines_list(api_json, limit=15):
         })
     return brief_list, items  # brief for list, items for full details
 
+def log_request(client_name, request_type, params=None):
+    params_str = ", ".join(f"{k}={v}" for k,v in (params or {}).items())
+    print(f"[REQUEST] Client={client_name} | Type={request_type} | Params={params_str}")
