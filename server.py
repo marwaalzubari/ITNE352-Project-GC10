@@ -1,7 +1,8 @@
 import socket
 import threading 
 import requests
-import json 
+import json
+from datetime import datetime 
 
 
 SERVER_ADDR=("127.0.0.1",50555)
@@ -9,132 +10,142 @@ API_KEY = "ae701edbf7d847d4bb8de291a026194d"
 
 
 
-#---- (Top Headlines function for request 1) ----#
+#---- (search Headlines function for request 1) ----#
+def limit_results(articles):
+    return articles[:15] if len(articles) > 15 else articles
 
-def get_top_headlines(limit=15 , country="us"):
-    url = f"https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}"
-    try:
-        #send the request with timeout to avoid blocking the server 
-        response = requests.get(url, timeout=5)
-        response.raise_for_status()
-        data= response.json()
-        # check if the response are valid 
-        if data.get("status")!="ok":
-            return{"error":"non-ok status","details":data}
-        #to limit the number of articles (15)
-        articles= data.get("articles",[])[:limit]
-        #bulid shortcut for each element 
-        short=[]
-        for a in articles:
-            short.append({
-                "source": a.get("source", {}).get("name"),
-                "author": a.get("author"),
-                "title": a.get("title")  
-            })
-            return{"status":"ok","totalResults": data.get("totalResults"), "articles": short}
-        #to handle errors
-    except Exception as e:
-        return {"error": "Failed to fetch headlines", "details": str(e)}
-    
+def build_brief_list(articles):
+    brief = []
+    for a in articles:
+        brief.append({
+            "source": a["source"]["name"],
+            "author": a.get("author", "N/A"),
+            "title": a.get("title", "No title")
+        })
+    return brief
 
-# function search depanding on keyword for request 2 
-def search_news(keyword):
+def build_details(article):
+    if article.get("publishedAt"):
+        dt = datetime.fromisoformat(article["publishedAt"].replace("Z", "+00:00"))
+        publish_date = dt.date().isoformat()
+        publish_time = dt.time().isoformat(timespec='seconds')
+    else:
+        publish_date = "N/A"
+        publish_time = "N/A"
+
+    return {
+        "source": article["source"]["name"],
+        "author": article.get("author", "N/A"),
+        "title": article.get("title", "N/A"),
+        "url": article.get("url", "N/A"),
+        "description": article.get("description", "N/A"),
+        "publish_date": publish_date,
+        "publish_time": publish_time
+    }
+    #end--------
+ #1.1 search by keyword 
+def search_by_keyword(keyword):
     url = f"https://newsapi.org/v2/everything?q={keyword}&apiKey={API_KEY}"
-    try:
-        response = requests.get(url, timeout=5)
-        response.raise_for_status()
-        return response.json()
-    except Exception as e:
-        return {"error": "Failed to fetch headlines", "details": str(e)}
+    response = requests.get(url)
+    data = response.json()
 
-# function to save JSON to file for request 3 
-def save_json_for_client(data, client_name, option_id, group_id="GC10"):
-    filename = f"{client_name}_{option_id}_{group_id}.json"
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    return filename
+    articles = limit_results(data.get("articles", []))
+    return {
+        "brief_list": build_brief_list(articles),
+        "full_articles": articles
+    } 
+#1.2 search by category 
+def search_by_category(category):
+    url = f"https://newsapi.org/v2/top-headlines?category={category}&apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
 
-# function to handle each client 
+    articles = limit_results(data.get("articles", []))
+    return {
+        "brief_list": build_brief_list(articles),
+        "full_articles": articles
+    }
+#1.3 search by country 
+def search_by_country(country):
+    url = f"https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+
+    articles = limit_results(data.get("articles", []))
+    return {
+        "brief_list": build_brief_list(articles),
+        "full_articles": articles
+    }
+#1.4 list all headlines 
+def list_all_headlines():
+    url = f"https://newsapi.org/v2/top-headlines?apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+
+    articles = limit_results(data.get("articles", []))
+    return {
+        "brief_list": build_brief_list(articles),
+        "full_articles": articles
+    }
+# function to get details 
+def get_details(full_articles, index):
+    if index < 0 or index >= len(full_articles):
+        return None
+    return build_details(full_articles[index])
+#handle client (only for option 1 for now )
 def handle_client(conn, addr):
-    print(f"[NEW CONNECTION] {addr} connected.")
-    name = conn.recv(1024).decode().strip()
-    print(f"[NEW USER] {name} connected.")
-    last_result = None
-    last_result_brief = None
-    
+    print(f"[Connected] {addr}")
+
     while True:
-        try:
-            request = conn.recv(1024).decode().strip()
-        except:
-            # client closed connection suddenly
-            break
-        
-        if not request:
+        sub_option = conn.recv(1024).decode()
+        if not sub_option:
             break
 
-        if request == "1":
-            # top headlines
-            news = get_top_headlines()
-            brief,full=make_headlines_list(news,limit=15)
-            last_result_full=full
-            last_result_brief=brief
-            
-            send_with_len(conn,json.dumps({"list":brief}).encode("utf-8"))
-           
+        if sub_option == "1.1":
+            conn.send("SEND_KEYWORD".encode())
+            keyword = conn.recv(1024).decode()
 
-            sel_data=recv_with_len(conn)
-            if not sel_Data:
-                break
-            sel=sel_data.decode().strip()
-            if sel.lower()=="back":
-                continue
-            try:
-                idx = int(sel) - 1
-                details = full[idx]
-                send_with_len(conn, json.dumps({"details": details}).encode("utf-8"))
-                
-                save_json_for_client(details, name, "1")
-            except Exception as e:
-                send_with_len(conn, json.dumps({"error": str(e)}).encode("utf-8"))
-        elif request == "2":
-            # search news 
-            try:
-                keyword = conn.recv(1024).decode()
-            except:
-                break
+            results = search_by_keyword(keyword)
+            conn.send(json.dumps(results["brief_list"]).encode())
 
-            news = search_news(keyword)
-            last_result = news
-            conn.sendall(json.dumps(news).encode())
+            idx = int(conn.recv(1024).decode())
+            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
-        elif request == "3":
-            # save as JSON
-            if last_result:
-                save_json(last_result)
-                conn.sendall(b"JSON saved successfully!")
-            else:
-                conn.sendall(b"No data to save!")
+        elif sub_option == "1.2":
+            conn.send("SEND_CATEGORY".encode())
+            category = conn.recv(1024).decode()
 
-        elif request == "4":
-            # send JSON file back
-            try:
-                with open("saved_news.json", "r", encoding="utf-8") as f:
-                    content = f.read()
-                conn.sendall(content.encode())
-            except:
-                conn.sendall(b"No saved JSON found!")
+            results = search_by_category(category)
+            conn.send(json.dumps(results["brief_list"]).encode())
 
-        elif request.lower() == "quit":
-            break
+            idx = int(conn.recv(1024).decode())
+            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
+        elif sub_option == "1.3":
+            conn.send("SEND_COUNTRY".encode())
+            country = conn.recv(1024).decode()
+
+            results = search_by_country(country)
+            conn.send(json.dumps(results["brief_list"]).encode())
+
+            idx = int(conn.recv(1024).decode())
+            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
+        elif sub_option == "1.4":
+            results = list_all_headlines()
+            conn.send(json.dumps(results["brief_list"]).encode())
+
+            idx = int(conn.recv(1024).decode())
+            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
+        elif sub_option == "1.5":
+            conn.send("BACK".encode())
+            continue
 
         else:
-            conn.sendall(b"Invalid request. Choose 1, 2, 3, 4, or quit.")
-    
+            conn.send("INVALID".encode())
+
     conn.close()
-    print(f"[DISCONNECTED] {name}")
-
-
-
 # function to start the server 
 def start_server():
     server_socket = socket.socket(family=socket.AF_INET, type= socket.SOCK_STREAM)
