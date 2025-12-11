@@ -1,16 +1,17 @@
 import socket
-import threading 
+import threading
 import requests
 import json
-from datetime import datetime 
+from datetime import datetime
 
 
-SERVER_ADDR=("127.0.0.1",50555)
+SERVER_ADDR = ("127.0.0.1", 50555)
 API_KEY = "ae701edbf7d847d4bb8de291a026194d"
 
 
 
-#---- (search Headlines function for request 1) ----#
+#####################################(Option 1 – Headlines)#######################################
+
 def limit_results(articles):
     return articles[:15] if len(articles) > 15 else articles
 
@@ -23,16 +24,7 @@ def build_brief_list(articles):
             "title": a.get("title", "No title")
         })
     return brief
-def limit_sources(sources):
-    return sources[:15] if len(sources) > 15 else sources
 
-def build_sources_brief_list(sources):
-    brief = []
-    for s in sources:
-        brief.append({
-            "name": s.get("name", "N/A")
-        })
-    return brief
 
 def build_details(article):
     if article.get("publishedAt"):
@@ -52,8 +44,8 @@ def build_details(article):
         "publish_date": publish_date,
         "publish_time": publish_time
     }
-    #end--------
- #1.1 search by keyword 
+
+
 def search_by_keyword(keyword):
     url = f"https://newsapi.org/v2/everything?q={keyword}&apiKey={API_KEY}"
     response = requests.get(url)
@@ -63,8 +55,9 @@ def search_by_keyword(keyword):
     return {
         "brief_list": build_brief_list(articles),
         "full_articles": articles
-    } 
-#1.2 search by category 
+    }
+
+
 def search_by_category(category):
     url = f"https://newsapi.org/v2/top-headlines?category={category}&apiKey={API_KEY}"
     response = requests.get(url)
@@ -75,7 +68,8 @@ def search_by_category(category):
         "brief_list": build_brief_list(articles),
         "full_articles": articles
     }
-#1.3 search by country 
+
+
 def search_by_country(country):
     url = f"https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}"
     response = requests.get(url)
@@ -86,7 +80,8 @@ def search_by_country(country):
         "brief_list": build_brief_list(articles),
         "full_articles": articles
     }
-#1.4 list all headlines 
+
+
 def list_all_headlines():
     url = f"https://newsapi.org/v2/top-headlines?apiKey={API_KEY}"
     response = requests.get(url)
@@ -97,115 +92,28 @@ def list_all_headlines():
         "brief_list": build_brief_list(articles),
         "full_articles": articles
     }
-# function to get details 
+
+
 def get_details(full_articles, index):
     if index < 0 or index >= len(full_articles):
         return None
     return build_details(full_articles[index])
-#handle client (only for option 1 for now )
-def handle_client(conn, addr):
-    print(f"[Connected] {addr}")
 
-    while True:
-        sub_option = conn.recv(1024).decode()
-        if not sub_option:
-            break
+####################################################(Option 2 – Sources)####################################################
 
-        if sub_option == "1.1":
-            conn.send("SEND_KEYWORD".encode())
-            keyword = conn.recv(1024).decode()
-
-            results = search_by_keyword(keyword)
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
-
-        elif sub_option == "1.2":
-            conn.send("SEND_CATEGORY".encode())
-            category = conn.recv(1024).decode()
-
-            results = search_by_category(category)
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
-
-        elif sub_option == "1.3":
-            conn.send("SEND_COUNTRY".encode())
-            country = conn.recv(1024).decode()
-
-            results = search_by_country(country)
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
-
-        elif sub_option == "1.4":
-            results = list_all_headlines()
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
-
-        elif sub_option == "1.5":
-            conn.send("BACK".encode())
-            continue
-        
-        elif sub_option == "2.1":   # search sources by category
-            conn.send("SEND_CATEGORY".encode())
-            category = conn.recv(1024).decode()
-
-            results = sources_by_category(category)
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            details = build_sources_details(results["full_list"][idx])
-            conn.send(json.dumps(details).encode())
+def limit_sources(sources):
+    return sources[:15] if len(sources) > 15 else sources
 
 
-        elif sub_option == "2.2":   # search sources by country
-            conn.send("SEND_COUNTRY".encode())
-            country = conn.recv(1024).decode()
-
-            results = sources_by_country(country)
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            details = build_sources_details(results["full_list"][idx])
-            conn.send(json.dumps(details).encode())
+def build_sources_brief_list(sources):
+    brief = []
+    for s in sources:
+        brief.append({
+            "name": s.get("name", "N/A")
+        })
+    return brief
 
 
-        elif sub_option == "2.3":   # search sources by language
-            conn.send("SEND_LANGUAGE".encode())
-            language = conn.recv(1024).decode()
-
-            results = sources_by_language(language)
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            details = build_sources_details(results["full_list"][idx])
-            conn.send(json.dumps(details).encode())
-
-
-        elif sub_option == "2.4":   # list all sources
-            results = list_all_sources()
-            conn.send(json.dumps(results["brief_list"]).encode())
-
-            idx = int(conn.recv(1024).decode())
-            details = build_sources_details(results["full_list"][idx])
-            conn.send(json.dumps(details).encode())
-
-
-        elif sub_option == "2.5":   # back to main menu
-            conn.send("BACK".encode())
-            continue
-
-        else:
-            conn.send("INVALID".encode())
-
-    conn.close()
-    
 def build_sources_details(source):
     return {
         "name": source.get("name", "N/A"),
@@ -215,8 +123,8 @@ def build_sources_details(source):
         "category": source.get("category", "N/A"),
         "language": source.get("language", "N/A")
     }
-    
-    #2.1 search by category 
+
+
 def sources_by_category(category):
     url = f"https://newsapi.org/v2/top-headlines/sources?category={category}&apiKey={API_KEY}"
     response = requests.get(url)
@@ -227,7 +135,8 @@ def sources_by_category(category):
         "brief_list": build_sources_brief_list(sources),
         "full_list": sources
     }
-    # 2.2 search by country 
+
+
 def sources_by_country(country):
     url = f"https://newsapi.org/v2/top-headlines/sources?country={country}&apiKey={API_KEY}"
     response = requests.get(url)
@@ -237,8 +146,9 @@ def sources_by_country(country):
     return {
         "brief_list": build_sources_brief_list(sources),
         "full_list": sources
-    }  
-    # 2.3 search by language 
+    }
+
+
 def sources_by_language(language):
     url = f"https://newsapi.org/v2/top-headlines/sources?language={language}&apiKey={API_KEY}"
     response = requests.get(url)
@@ -248,8 +158,9 @@ def sources_by_language(language):
     return {
         "brief_list": build_sources_brief_list(sources),
         "full_list": sources
-    } 
-    #2.4 list all sources 
+    }
+
+
 def list_all_sources():
     url = f"https://newsapi.org/v2/top-headlines/sources?apiKey={API_KEY}"
     response = requests.get(url)
@@ -259,36 +170,154 @@ def list_all_sources():
     return {
         "brief_list": build_sources_brief_list(sources),
         "full_list": sources
-    }     
-# function to start the server 
+    }
+
+########################################## (handle_client) #################################################
+
+def handle_client(conn, addr):
+    print(f"[Connected] {addr}")
+
+    while True:
+        # ================= Main Menu Layer ====================
+        main_option = conn.recv(1024).decode().strip()
+        if not main_option:
+            break
+
+        # -------------------- Option 1 ------------------------
+        if main_option == "1":
+            conn.send("HEADLINES_MENU".encode())  # tell client to show submenu
+
+            while True:
+                sub_option = conn.recv(1024).decode().strip()
+                if not sub_option:
+                    break
+
+                if sub_option == "1.1":
+                    conn.send("SEND_KEYWORD".encode())
+                    keyword = conn.recv(1024).decode()
+
+                    results = search_by_keyword(keyword)
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
+                elif sub_option == "1.2":
+                    conn.send("SEND_CATEGORY".encode())
+                    category = conn.recv(1024).decode()
+
+                    results = search_by_category(category)
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
+                elif sub_option == "1.3":
+                    conn.send("SEND_COUNTRY".encode())
+                    country = conn.recv(1024).decode()
+
+                    results = search_by_country(country)
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
+                elif sub_option == "1.4":
+                    results = list_all_headlines()
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
+                elif sub_option == "1.5":
+                    conn.send("BACK".encode())
+                    break  # back to main menu
+
+                else:
+                    conn.send("INVALID".encode())
+
+        # -------------------- Option 2 ------------------------
+        elif main_option == "2":
+            conn.send("SOURCES_MENU".encode())  # tell client to show submenu
+
+            while True:
+                sub_option = conn.recv(1024).decode().strip()
+                if not sub_option:
+                    break
+
+                if sub_option == "2.1":
+                    conn.send("SEND_CATEGORY".encode())
+                    category = conn.recv(1024).decode()
+
+                    results = sources_by_category(category)
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+
+                elif sub_option == "2.2":
+                    conn.send("SEND_COUNTRY".encode())
+                    country = conn.recv(1024).decode()
+
+                    results = sources_by_country(country)
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+
+                elif sub_option == "2.3":
+                    conn.send("SEND_LANGUAGE".encode())
+                    language = conn.recv(1024).decode()
+
+                    results = sources_by_language(language)
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+
+                elif sub_option == "2.4":
+                    results = list_all_sources()
+                    conn.send(json.dumps(results["brief_list"]).encode())
+
+                    idx = int(conn.recv(1024).decode())
+                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+
+                elif sub_option == "2.5":
+                    conn.send("BACK".encode())
+                    break  # back to main menu
+
+                else:
+                    conn.send("INVALID".encode())
+
+
+        # -------------------- Option 3 ------------------------
+        elif main_option == "3":
+            conn.send("BYE".encode())
+            print(f"[QUIT] {addr} disconnected")
+            break
+
+        else:
+            conn.send("INVALID".encode())
+
+    conn.close()
+    print(f"[Disconnected] {addr}")
+
+
+
+####################################(Start Server)############################
+
 def start_server():
-    server_socket = socket.socket(family=socket.AF_INET, type= socket.SOCK_STREAM)
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind(SERVER_ADDR)
     server_socket.listen(5)
-   
+
     print(f"Server is listening on {SERVER_ADDR}...")
 
     while True:
         conn, addr = server_socket.accept()
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
-        print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")  
+        print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
 
 start_server()
-
-def make_headlines_list(api_json, limit=15):
-    items = api_json.get("articles", [])[:limit]
-    brief_list = []
-    for i, art in enumerate(items, start=1):
-        brief_list.append({
-            "index": i,
-            "source": art.get("source", {}).get("name"),
-            "author": art.get("author"),
-            "title": art.get("title")
-        })
-    return brief_list, items  # brief for list, items for full details
-
-def log_request(client_name, request_type, params=None):
-    params_str = ", ".join(f"{k}={v}" for k,v in (params or {}).items())
-    print(f"[REQUEST] Client={client_name} | Type={request_type} | Params={params_str}")
