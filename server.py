@@ -176,6 +176,8 @@ def list_all_sources():
 
 def handle_client(conn, addr):
     print(f"[Connected] {addr}")
+    client_name = conn.recv(1024).decode().strip()
+    print(f"[Client Connected] {client_name} from {addr}")
 
     while True:
         # ================= Main Menu Layer ====================
