@@ -195,8 +195,9 @@ def list_all_sources():
 
 ########################################## (handle_client) #################################################
 
+#handle client connection and process all menu options 
 def handle_client(conn, addr):
-    print(f"[Connected] {addr}")
+    print(f"[NEW CONNECTION] client connected from  {addr}")
 
     # receive client name
     client_name = conn.recv(1024).decode().strip()
