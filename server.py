@@ -23,6 +23,16 @@ def build_brief_list(articles):
             "title": a.get("title", "No title")
         })
     return brief
+def limit_sources(sources):
+    return sources[:15] if len(sources) > 15 else sources
+
+def build_sources_brief_list(sources):
+    brief = []
+    for s in sources:
+        brief.append({
+            "name": s.get("name", "N/A")
+        })
+    return brief
 
 def build_details(article):
     if article.get("publishedAt"):
@@ -141,11 +151,115 @@ def handle_client(conn, addr):
         elif sub_option == "1.5":
             conn.send("BACK".encode())
             continue
+        
+        elif sub_option == "2.1":   # search sources by category
+            conn.send("SEND_CATEGORY".encode())
+            category = conn.recv(1024).decode()
+
+            results = sources_by_category(category)
+            conn.send(json.dumps(results["brief_list"]).encode())
+
+            idx = int(conn.recv(1024).decode())
+            details = build_sources_details(results["full_list"][idx])
+            conn.send(json.dumps(details).encode())
+
+
+        elif sub_option == "2.2":   # search sources by country
+            conn.send("SEND_COUNTRY".encode())
+            country = conn.recv(1024).decode()
+
+            results = sources_by_country(country)
+            conn.send(json.dumps(results["brief_list"]).encode())
+
+            idx = int(conn.recv(1024).decode())
+            details = build_sources_details(results["full_list"][idx])
+            conn.send(json.dumps(details).encode())
+
+
+        elif sub_option == "2.3":   # search sources by language
+            conn.send("SEND_LANGUAGE".encode())
+            language = conn.recv(1024).decode()
+
+            results = sources_by_language(language)
+            conn.send(json.dumps(results["brief_list"]).encode())
+
+            idx = int(conn.recv(1024).decode())
+            details = build_sources_details(results["full_list"][idx])
+            conn.send(json.dumps(details).encode())
+
+
+        elif sub_option == "2.4":   # list all sources
+            results = list_all_sources()
+            conn.send(json.dumps(results["brief_list"]).encode())
+
+            idx = int(conn.recv(1024).decode())
+            details = build_sources_details(results["full_list"][idx])
+            conn.send(json.dumps(details).encode())
+
+
+        elif sub_option == "2.5":   # back to main menu
+            conn.send("BACK".encode())
+            continue
 
         else:
             conn.send("INVALID".encode())
 
     conn.close()
+    
+def build_sources_details(source):
+    return {
+        "name": source.get("name", "N/A"),
+        "country": source.get("country", "N/A"),
+        "description": source.get("description", "N/A"),
+        "url": source.get("url", "N/A"),
+        "category": source.get("category", "N/A"),
+        "language": source.get("language", "N/A")
+    }
+    
+    #2.1 search by category 
+def sources_by_category(category):
+    url = f"https://newsapi.org/v2/top-headlines/sources?category={category}&apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+    sources = limit_sources(data.get("sources", []))
+
+    return {
+        "brief_list": build_sources_brief_list(sources),
+        "full_list": sources
+    }
+    # 2.2 search by country 
+def sources_by_country(country):
+    url = f"https://newsapi.org/v2/top-headlines/sources?country={country}&apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+    sources = limit_sources(data.get("sources", []))
+
+    return {
+        "brief_list": build_sources_brief_list(sources),
+        "full_list": sources
+    }  
+    # 2.3 search by language 
+def sources_by_language(language):
+    url = f"https://newsapi.org/v2/top-headlines/sources?language={language}&apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+    sources = limit_sources(data.get("sources", []))
+
+    return {
+        "brief_list": build_sources_brief_list(sources),
+        "full_list": sources
+    } 
+    #2.4 list all sources 
+def list_all_sources():
+    url = f"https://newsapi.org/v2/top-headlines/sources?apiKey={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+    sources = limit_sources(data.get("sources", []))
+
+    return {
+        "brief_list": build_sources_brief_list(sources),
+        "full_list": sources
+    }     
 # function to start the server 
 def start_server():
     server_socket = socket.socket(family=socket.AF_INET, type= socket.SOCK_STREAM)
