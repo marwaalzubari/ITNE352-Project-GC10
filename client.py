@@ -2,6 +2,7 @@ import socket
 import threading
 import json
 SERVER_ADDR=("127.0.0.1",50555)
+BUF_SIZE = 4096 # larger than the client because is recieves bigger data from the server 
 
 # function to start the client
 def start_client():
