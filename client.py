@@ -10,7 +10,7 @@ countries = ["au","ca","jp","ae","sa","kr","us","ma"]
 languages = ["ar","en"]
 categories = ["business","general","health","science","sports","technology"]
 
-"""""""""""""""""""""""""""menu"""""""""""""""""""""""""""
+"""menu"""
 
 # display the main menu options
 def main_menu():
@@ -37,7 +37,7 @@ def sources_menu():
      print("2.4- List all ")
      print("2.5- Back to the main menu ")
 
-"""""""""""""""""""""""""""receiving functions"""""""""""""""""""""""""""
+"""receiving functions"""
 
 #receive a text message from the server
 def recv_text(socket):
@@ -48,13 +48,55 @@ def recv_json(socket):
      data= socket.recv(BUF_SIZE).decode("utf-8",errors="replace")
      return json.loads(data)
 
-"""""""""""""""""""""""""""displaying functions"""""""""""""""""""""""""""
-
+"""displaying functions"""
+"""
+headline
+"""
 #display list of headlines
-def display_headlines_list(item):
-     print("\t \t \t Headlines list")
-     for i, item in enumerate(item):
-          
+def display_all_headlines(item):
+     print("\t \t \t Headlines lists")
+     i=0
+     for j in item:
+          print(f"{i}) Source: {j['source']} Author: {j['author']}")
+          print(f"   Title : {j['title']}")
+          i += 1
+     print()
+
+#display a detailed entry of selected headline
+def display_specific_headline(item):
+     print("\t \t \t Headline list")
+     print(f"Source       : {item['source']}")
+     print(f"Author       : {item['author']}")
+     print(f"Title        : {item['title']}")
+     print(f"URL          : {item['url']}")
+     print(f"Description  : {item['description']}")
+     print(f"Publish date : {item['publish_date']}")
+     print(f"Publish time : {item['publish_time']}")
+     print("\t \t \t New entry")
+
+"""
+source
+"""
+#display list of sources
+def display_all_sources(item):
+     print("\t \t \t sources lists")
+     i=0
+     for j in item:
+          print(f"{i}) {j['name']}")
+          i += 1
+     print()
+
+#display a detailed entry of selected source
+def display_specific_source(item):
+     print("\t \t \t Source list")
+     print(f"Name        : {item['name']}")
+     print(f"Country     : {item['country']}")
+     print(f"Description : {item['description']}")
+     print(f"URL         : {item['url']}")
+     print(f"Category    : {item['category']}")
+     print(f"Language    : {item['language']}")
+     print("\t \t \t New entry")
+     
 
 # function to start the client
 def start_client():
