@@ -3,7 +3,7 @@ import threading
 import json
 
 SERVER_ADDR=("127.0.0.1",50555)
-BUF_SIZE = 4096 # larger than the client because is recieves bigger data from the server 
+BUF_SIZE = 4096 # larger because is recieves bigger data from the server 
 
 # parameters from table 2 in the document
 countries = ["au","ca","jp","ae","sa","kr","us","ma"]
@@ -40,12 +40,12 @@ def sources_menu():
 """receiving functions"""
 
 #receive a text message from the server
-def recv_text(socket):
-    return socket.recv(BUF_SIZE).decoode("utf-8",errors="replace").strip()
+def recv_text(sockt):
+    return sockt.recv(BUF_SIZE).decode("utf-8",errors="replace").strip()
 
 #receive json data from the server and convert it to object understood in python
-def recv_json(socket): 
-     data= socket.recv(BUF_SIZE).decode("utf-8",errors="replace")
+def recv_json(sockt): 
+     data= sockt.recv(BUF_SIZE).decode("utf-8",errors="replace")
      return json.loads(data)
 
 """displaying functions"""
@@ -96,7 +96,7 @@ def display_specific_source(item):
      print(f"Category    : {item['category']}")
      print(f"Language    : {item['language']}")
      print("\t \t \t New entry")
-     
+
 
 # function to start the client
 def start_client():
