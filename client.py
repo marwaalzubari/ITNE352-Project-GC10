@@ -1,5 +1,4 @@
 import socket
-import threading
 import json
 
 SERVER_ADDR=("127.0.0.1",50555)
