@@ -54,11 +54,9 @@ headline
 #display list of headlines
 def display_all_headlines(item):
      print("\t \t \t Headlines lists")
-     i=0
-     for j in item:
+     for i,j in enumerate(item):
           print(f"{i}) Source: {j['source']} Author: {j['author']}")
           print(f"   Title : {j['title']}")
-          i += 1
      print()
 
 #display a detailed entry of selected headline
@@ -72,6 +70,7 @@ def display_specific_headline(item):
      print(f"Publish date : {item['publish_date']}")
      print(f"Publish time : {item['publish_time']}")
      print("\t \t \t New entry")
+     print()
 
 """
 source
@@ -79,10 +78,8 @@ source
 #display list of sources
 def display_all_sources(item):
      print("\t \t \t sources lists")
-     i=0
-     for j in item:
+     for i,j in item:
           print(f"{i}) {j['name']}")
-          i += 1
      print()
 
 #display a detailed entry of selected source
@@ -95,8 +92,20 @@ def display_specific_source(item):
      print(f"Category    : {item['category']}")
      print(f"Language    : {item['language']}")
      print("\t \t \t New entry")
+     print()
 
+#function that ask the user to select index
+def receive_index(max):
+     user_input = input(f"Select index (0-{max}) or b to go back: ").strip().lower()
+     if user_input == "b":
+          return None
+     if user_input.isdigit():
+          index = int(user_input)
+          if 0 <= index <= max:
+                return index
+     print("Invalid input, try again.")
 
+  
 # function to start the client
 def start_client():
      client_socket = socket.socket(family=socket.AF_INET, type= socket.SOCK_STREAM)#create socket
