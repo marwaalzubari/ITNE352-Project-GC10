@@ -97,12 +97,12 @@ def display_specific_source(item):
 #function that ask the user to select index
 def receive_index(max):
     while True:
-          user_input = input(f"Select index (0-{max_index}) or b to go back: ").strip().lower()
+          user_input = input(f"Select index (0-{max}) or b to go back: ").strip().lower()
           if user_input == "b":
                return None
           if user_input.isdigit():
                index = int(user_input)
-               if 0 <= index <= max_index:
+               if 0 <= index <= max:
                     return index
           print("Invalid input. try again.")
 
