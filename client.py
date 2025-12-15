@@ -96,14 +96,15 @@ def display_specific_source(item):
 
 #function that ask the user to select index
 def receive_index(max):
-     user_input = input(f"Select index (0-{max}) or b to go back: ").strip().lower()
-     if user_input == "b":
-          return None
-     if user_input.isdigit():
-          index = int(user_input)
-          if 0 <= index <= max:
-                return index
-     print("Invalid input. try again.")
+    while True:
+          user_input = input(f"Select index (0-{max_index}) or b to go back: ").strip().lower()
+          if user_input == "b":
+               return None
+          if user_input.isdigit():
+               index = int(user_input)
+               if 0 <= index <= max_index:
+                    return index
+          print("Invalid input. try again.")
 
 
 """      
@@ -211,3 +212,28 @@ def start_client():
      #sent the username to the server
      username=input("Enter your username:")
      client_socket.sendall(username.encode("utf-8"))
+     while True:
+        main_menu()
+        choice = input("Choose option: ").strip()
+
+        client_socket.sendall(choice.encode("utf-8"))
+        answer = recv_text(client_socket)
+
+        if answer == "HEADLINES_MENU":
+            headline(client_socket)
+
+        elif answer == "SOURCES_MENU":
+            sources(client_socket)
+
+        elif answer == "BYE":
+            print("Disconnected from server.")
+            break
+
+        else:
+            print("Invalid option.")
+
+     client_socket.close()
+
+
+if __name__ == "__main__":
+    start_client()
