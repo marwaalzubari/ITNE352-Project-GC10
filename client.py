@@ -9,7 +9,7 @@ countries = ["au","ca","jp","ae","sa","kr","us","ma"]
 languages = ["ar","en"]
 categories = ["business","general","health","science","sports","technology"]
 
-"""menu"""
+"""       menu       """
 
 # display the main menu options
 def main_menu():
@@ -36,7 +36,7 @@ def sources_menu():
      print("2.4- List all ")
      print("2.5- Back to the main menu ")
 
-"""receiving functions"""
+"""       receiving functions       """
 
 #receive a text message from the server
 def recv_text(sockt):
@@ -47,9 +47,9 @@ def recv_json(sockt):
      data= sockt.recv(BUF_SIZE).decode("utf-8",errors="replace")
      return json.loads(data)
 
-"""displaying functions"""
+"""       displaying functions       """
 """
-headline
+       headline
 """
 #display list of headlines
 def display_all_headlines(item):
@@ -73,12 +73,12 @@ def display_specific_headline(item):
      print()
 
 """
-source
+       source
 """
 #display list of sources
 def display_all_sources(item):
      print("\t \t \t sources lists")
-     for i,j in item:
+     for i,j in enumerate(item):
           print(f"{i}) {j['name']}")
      print()
 
@@ -103,9 +103,56 @@ def receive_index(max):
           index = int(user_input)
           if 0 <= index <= max:
                 return index
-     print("Invalid input, try again.")
+     print("Invalid input. try again.")
 
-  
+
+"""      
+       headline code part
+"""
+
+def headline(sockt):
+     while True:
+        headlines_menu()
+        option = input("Choose option: ").strip()
+
+        sockt.sendall(option.encode("utf-8"))
+
+        if option == "1.5":
+            recv_text(sockt)  
+            return
+
+        serverRequest = recv_text(sockt)
+
+        if serverRequest == "SEND_KEYWORD":
+            keyword = input("Enter keyword: ").strip()
+            sockt.sendall(keyword.encode("utf-8"))
+
+        elif serverRequest == "SEND_CATEGORY":
+            category = input("Enter category: ").strip()
+            sockt.sendall(category.encode("utf-8"))
+
+        elif serverRequest == "SEND_COUNTRY":
+            country = input("Enter country: ").strip()
+            sockt.sendall(country.encode("utf-8"))
+
+        elif serverRequest == "INVALID":
+            print("Invalid option.")
+            continue
+
+        brief_list = recv_json(sockt)
+        display_all_headlines(brief_list)
+
+        indx = receive_index(len(brief_list) - 1)
+        if indx is None:
+            sockt.sendall(b"0")
+            recv_text(sockt)
+            continue
+
+        sockt.sendall(str(indx).encode("utf-8"))
+
+        details = recv_json(sockt)
+        display_specific_headline(details)
+
 # function to start the client
 def start_client():
      client_socket = socket.socket(family=socket.AF_INET, type= socket.SOCK_STREAM)#create socket
