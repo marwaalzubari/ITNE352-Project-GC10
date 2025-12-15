@@ -86,3 +86,29 @@ class NewsClientGUI:
         tk.Button(self.root, text="Search by Language", command=lambda: self.param_request("2.3", languages)).pack()
         tk.Button(self.root, text="List All Sources", command=lambda: self.simple_request("2.4")).pack()
         tk.Button(self.root, text="Back", command=self.build_main_menu).pack(pady=10)
+    # ---------- Requests ----------
+    def simple_request(self, option):
+        self.sock.sendall(option.encode())
+        server_req = recv_text(self.sock)
+        if server_req == "INVALID":
+            return
+        self.show_list(recv_json(self.sock), option)
+
+    def param_request(self, option, allowed):
+        self.sock.sendall(option.encode())
+        server_req = recv_text(self.sock)
+
+        self.clear_screen()
+        tk.Label(self.root, text=f"Enter parameter ({', '.join(allowed)})").pack()
+        entry = tk.Entry(self.root)
+        entry.pack()
+
+        def send_param():
+            value = entry.get().strip().lower()
+            if value not in allowed:
+                messagebox.showerror("Error", "Invalid value")
+                return
+            self.sock.sendall(value.encode())
+            self.show_list(recv_json(self.sock), option)
+
+        tk.Button(self.root, text="Send", command=send_param).pack()
