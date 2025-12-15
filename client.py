@@ -191,7 +191,7 @@ def sources(sockt):
 
         elif serverRequest == "SEND_LANGUAGE":
             language = input("Enter language: ").strip().lower()
-            if languge not in languages:
+            if language not in languages:
              print("invalid languge.allowed values:",languages)
              continue
             sockt.sendall(language.encode("utf-8"))

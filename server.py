@@ -229,8 +229,14 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
+                    idx_data = conn.recv(1024).decode().strip()
+
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+
 
                 # 1.2 Search by category
                 elif sub_option == "1.2":
@@ -244,7 +250,12 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
+                    idx_data = conn.recv(1024).decode().strip()
+
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
                 # 1.3 Search by country
@@ -259,7 +270,12 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
+                    idx_data = conn.recv(1024).decode().strip()
+
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
                 # 1.4 List all headlines
@@ -271,7 +287,12 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
+                    idx_data = conn.recv(1024).decode().strip()
+
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
                 # Back
@@ -290,7 +311,7 @@ def handle_client(conn, addr):
                 sub_option = conn.recv(1024).decode().strip()
                 if not sub_option:
                     break
-
+                #2.1
                 if sub_option == "2.1":
                     conn.send("SEND_CATEGORY".encode())
                     category = conn.recv(1024).decode().strip()
@@ -302,9 +323,14 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
-                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+                    idx_data = conn.recv(1024).decode().strip()
 
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                #2.2 
                 elif sub_option == "2.2":
                     conn.send("SEND_COUNTRY".encode())
                     country = conn.recv(1024).decode().strip()
@@ -316,9 +342,14 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
-                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+                    idx_data = conn.recv(1024).decode().strip()
 
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                #2.3
                 elif sub_option == "2.3":
                     conn.send("SEND_LANGUAGE".encode())
                     language = conn.recv(1024).decode().strip()
@@ -330,9 +361,14 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
-                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+                    idx_data = conn.recv(1024).decode().strip()
 
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                 #2.4
                 elif sub_option == "2.4":
                     log_request(client_name, "2.4 List All Sources")
 
@@ -341,9 +377,14 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx = int(conn.recv(1024).decode())
-                    conn.send(json.dumps(build_sources_details(results["full_list"][idx])).encode())
+                    idx_data = conn.recv(1024).decode().strip()
 
+                    if idx_data == "BACK":
+                      continue  
+
+                    idx = int(idx_data)
+                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                #2.5
                 elif sub_option == "2.5":
                     conn.send("BACK".encode())
                     break
