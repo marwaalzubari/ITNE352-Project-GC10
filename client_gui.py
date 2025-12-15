@@ -112,3 +112,16 @@ class NewsClientGUI:
             self.show_list(recv_json(self.sock), option)
 
         tk.Button(self.root, text="Send", command=send_param).pack()
+ # ---------- Quit ----------
+    def quit(self):
+        try:
+            self.sock.sendall(b"3")
+        except:
+            pass
+        self.sock.close()
+        self.root.destroy()
+# ---------------- Run ----------------
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = NewsClientGUI(root)
+    root.mainloop()
