@@ -10,7 +10,7 @@ languages = ["ar","en"]
 categories = ["business","general","health","science","sports","technology"]
 
 """       menu       """
-
+ 
 # display the main menu options
 def main_menu():
      print("\t \t \t Main Menu") 
@@ -129,11 +129,17 @@ def headline(sockt):
             sockt.sendall(keyword.encode("utf-8"))
 
         elif serverRequest == "SEND_CATEGORY":
-            category = input("Enter category: ").strip()
+            category = input("Enter category: ").strip().lower()
+            if category not in categories:
+             print ("invalid categoty.allowed values:",categories)
+             continue
             sockt.sendall(category.encode("utf-8"))
 
         elif serverRequest == "SEND_COUNTRY":
-            country = input("Enter country: ").strip()
+            country = input("Enter country: ").strip().lower()
+            if country not in countries:
+             print("invalid country.allowed values:",countries)
+             continue
             sockt.sendall(country.encode("utf-8"))
 
         elif serverRequest == "INVALID":
@@ -145,8 +151,7 @@ def headline(sockt):
 
         indx = receive_index(len(complete_list) - 1)
         if indx is None:
-            sockt.sendall(b"0")
-            recv_text(sockt)
+            sockt.sendall(b"BACK") 
             continue
 
         sockt.sendall(str(indx).encode("utf-8"))
@@ -171,15 +176,24 @@ def sources(sockt):
         serverRequest = recv_text(sockt)
 
         if serverRequest == "SEND_CATEGORY":
-            category = input("Enter category: ").strip()
+            category = input("Enter category: ").strip().lower()
+            if category not in categories:
+              print("invalid category.Allowed values:",categories)
+              continue
             sockt.sendall(category.encode("utf-8"))
 
         elif serverRequest == "SEND_COUNTRY":
-            country = input("Enter country: ").strip()
+            country = input("Enter country: ").strip().lower()
+            if country not in countries:
+             print("invalid country.allowed values:",countries)
+             continue
             sockt.sendall(country.encode("utf-8"))
 
         elif serverRequest == "SEND_LANGUAGE":
-            language = input("Enter language: ").strip()
+            language = input("Enter language: ").strip().lower()
+            if languge not in languages:
+             print("invalid languge.allowed values:",languages)
+             continue
             sockt.sendall(language.encode("utf-8"))
 
         elif serverRequest == "INVALID":
@@ -191,8 +205,7 @@ def sources(sockt):
 
         indx = receive_index(len(complete_list) - 1)
         if indx is None:
-            sockt.sendall(b"0")
-            recv_text(sockt)
+            sockt.sendall(b"BACK")
             continue
 
         sockt.sendall(str(indx).encode("utf-8"))
