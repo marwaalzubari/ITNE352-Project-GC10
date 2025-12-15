@@ -73,3 +73,16 @@ class NewsClientGUI:
         tk.Button(self.root, text="Search by Country", command=lambda: self.param_request("1.3", countries)).pack()
         tk.Button(self.root, text="List All Headlines", command=lambda: self.simple_request("1.4")).pack()
         tk.Button(self.root, text="Back", command=self.build_main_menu).pack(pady=10)     
+        # ---------- Sources ----------
+    def sources_menu(self):
+        self.sock.sendall(b"2")
+        recv_text(self.sock)  # SOURCES_MENU
+
+        self.clear_screen()
+        tk.Label(self.root, text="Sources Menu").pack(pady=10)
+
+        tk.Button(self.root, text="Search by Category", command=lambda: self.param_request("2.1", categories)).pack()
+        tk.Button(self.root, text="Search by Country", command=lambda: self.param_request("2.2", countries)).pack()
+        tk.Button(self.root, text="Search by Language", command=lambda: self.param_request("2.3", languages)).pack()
+        tk.Button(self.root, text="List All Sources", command=lambda: self.simple_request("2.4")).pack()
+        tk.Button(self.root, text="Back", command=self.build_main_menu).pack(pady=10)
