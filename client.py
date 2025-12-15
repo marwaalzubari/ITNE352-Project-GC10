@@ -139,10 +139,10 @@ def headline(sockt):
             print("Invalid option.")
             continue
 
-        brief_list = recv_json(sockt)
-        display_all_headlines(brief_list)
+        complete_list = recv_json(sockt)
+        display_all_headlines(complete_list)
 
-        indx = receive_index(len(brief_list) - 1)
+        indx = receive_index(len(complete_list) - 1)
         if indx is None:
             sockt.sendall(b"0")
             recv_text(sockt)
@@ -150,8 +150,55 @@ def headline(sockt):
 
         sockt.sendall(str(indx).encode("utf-8"))
 
-        details = recv_json(sockt)
-        display_specific_headline(details)
+        detail = recv_json(sockt)
+        display_specific_headline(detail)
+
+"""      
+       sources code part
+"""
+def sources(sockt):
+      while True:
+        sources_menu()
+        option = input("Choose option: ").strip()
+
+        sockt.sendall(option.encode("utf-8"))
+
+        if option == "2.5":
+            recv_text(sockt)
+            return
+
+        serverRequest = recv_text(sockt)
+
+        if serverRequest == "SEND_CATEGORY":
+            category = input("Enter category: ").strip()
+            sockt.sendall(category.encode("utf-8"))
+
+        elif serverRequest == "SEND_COUNTRY":
+            country = input("Enter country: ").strip()
+            sockt.sendall(country.encode("utf-8"))
+
+        elif serverRequest == "SEND_LANGUAGE":
+            language = input("Enter language: ").strip()
+            sockt.sendall(language.encode("utf-8"))
+
+        elif serverRequest == "INVALID":
+            print("Invalid option.")
+            continue
+
+        complete_list = recv_json(sockt)
+        display_all_sources(complete_list)
+
+        indx = receive_index(len(complete_list) - 1)
+        if indx is None:
+            sockt.sendall(b"0")
+            recv_text(sockt)
+            continue
+
+        sockt.sendall(str(indx).encode("utf-8"))
+
+        detail = recv_json(sockt)
+        display_specific_source(detail)
+
 
 # function to start the client
 def start_client():
