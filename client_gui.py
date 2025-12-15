@@ -46,3 +46,17 @@ class NewsClientGUI:
         tk.Button(self.root, text="Search Headlines", width=25, command=self.headlines_menu).pack(pady=5)
         tk.Button(self.root, text="List Sources", width=25, command=self.sources_menu).pack(pady=5)
         tk.Button(self.root, text="Quit", width=25, command=self.quit).pack(pady=5)
+        
+   # ---------- Connection ----------
+    def connect(self):
+        username = self.username_entry.get().strip()
+        if not username:
+            messagebox.showerror("Error", "Username required")
+            return
+        try:
+            self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            self.sock.connect(SERVER_ADDR)
+            self.sock.sendall(username.encode())
+            self.build_main_menu()
+        except Exception as e:
+            messagebox.showerror("Connection Error", str(e))       
