@@ -59,4 +59,17 @@ class NewsClientGUI:
             self.sock.sendall(username.encode())
             self.build_main_menu()
         except Exception as e:
-            messagebox.showerror("Connection Error", str(e))       
+            messagebox.showerror("Connection Error", str(e))  
+    # ---------- Headlines ----------
+    def headlines_menu(self):
+        self.sock.sendall(b"1")
+        recv_text(self.sock)  # HEADLINES_MENU
+
+        self.clear_screen()
+        tk.Label(self.root, text="Headlines Menu").pack(pady=10)
+
+        tk.Button(self.root, text="Search by Keyword", command=lambda: self.simple_request("1.1")).pack()
+        tk.Button(self.root, text="Search by Category", command=lambda: self.param_request("1.2", categories)).pack()
+        tk.Button(self.root, text="Search by Country", command=lambda: self.param_request("1.3", countries)).pack()
+        tk.Button(self.root, text="List All Headlines", command=lambda: self.simple_request("1.4")).pack()
+        tk.Button(self.root, text="Back", command=self.build_main_menu).pack(pady=10)     
