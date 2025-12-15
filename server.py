@@ -191,6 +191,11 @@ def list_all_sources():
         "brief_list": build_sources_brief_list(sources),
         "full_list": sources
     }
+def get_source_details(full_list, index):
+    if index < 0 or index >= len(full_list):
+        return None
+    return build_sources_details(full_list[index])
+
 
 
 ########################################## (handle_client) #################################################
@@ -229,7 +234,7 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx_data = conn.recv(1024).decode().strip()
+                    idx_data = conn.recv(1024).decode().strip()############
 
                     if idx_data == "BACK":
                       continue  
@@ -329,7 +334,8 @@ def handle_client(conn, addr):
                       continue  
 
                     idx = int(idx_data)
-                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                    conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
+
                 #2.2 
                 elif sub_option == "2.2":
                     conn.send("SEND_COUNTRY".encode())
@@ -348,7 +354,8 @@ def handle_client(conn, addr):
                       continue  
 
                     idx = int(idx_data)
-                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                    conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
+
                 #2.3
                 elif sub_option == "2.3":
                     conn.send("SEND_LANGUAGE".encode())
@@ -367,7 +374,8 @@ def handle_client(conn, addr):
                       continue  
 
                     idx = int(idx_data)
-                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                    conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
+
                  #2.4
                 elif sub_option == "2.4":
                     log_request(client_name, "2.4 List All Sources")
@@ -383,7 +391,8 @@ def handle_client(conn, addr):
                       continue  
 
                     idx = int(idx_data)
-                    conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
+                    conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
+
                 #2.5
                 elif sub_option == "2.5":
                     conn.send("BACK".encode())
