@@ -114,13 +114,16 @@ class NewsClientGUI:
         tk.Button(self.root, text="Send", command=send_param).pack()
           
         
-   # ---------- Display ----------
-   
-   
-   
-   
-   
-   
+# ---------- Display ----------
+    def show_list(self, items):
+        self.full_list = items
+        self.clear_screen()
+
+        listbox = tk.Listbox(self.root, width=80)
+        for i, item in enumerate(items):
+            text = item.get("title") or item.get("name")
+            listbox.insert(tk.END, f"{i}) {text}")
+        listbox.pack()
  # ---------- Quit ----------
     def quit(self):
         try:
