@@ -238,8 +238,14 @@ def handle_client(conn, addr):
 
                     if idx_data == "BACK":
                       continue  
+                            
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
 
-                    idx = int(idx_data)
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
 
@@ -260,7 +266,13 @@ def handle_client(conn, addr):
                     if idx_data == "BACK":
                       continue  
 
-                    idx = int(idx_data)
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
+
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
                 # 1.3 Search by country
@@ -280,7 +292,13 @@ def handle_client(conn, addr):
                     if idx_data == "BACK":
                       continue  
 
-                    idx = int(idx_data)
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
+                    
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
                 # 1.4 List all headlines
@@ -297,7 +315,13 @@ def handle_client(conn, addr):
                     if idx_data == "BACK":
                       continue  
 
-                    idx = int(idx_data)
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
+                    
                     conn.send(json.dumps(get_details(results["full_articles"], idx)).encode())
 
                 # Back
@@ -333,7 +357,13 @@ def handle_client(conn, addr):
                     if idx_data == "BACK":
                       continue  
 
-                    idx = int(idx_data)
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
+                    
                     conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
 
                 #2.2 
@@ -353,7 +383,13 @@ def handle_client(conn, addr):
                     if idx_data == "BACK":
                       continue  
 
-                    idx = int(idx_data)
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
+                    
                     conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
 
                 #2.3
@@ -373,7 +409,13 @@ def handle_client(conn, addr):
                     if idx_data == "BACK":
                       continue  
 
-                    idx = int(idx_data)
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
+                    
                     conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
 
                  #2.4
@@ -390,7 +432,13 @@ def handle_client(conn, addr):
                     if idx_data == "BACK":
                       continue  
 
-                    idx = int(idx_data)
+                        # error handling
+                    try:
+                        idx = int(idx_data)
+                    except ValueError:
+                        conn.send(json.dumps(None).encode())
+                        continue
+                    
                     conn.send(json.dumps(get_source_details(results["full_list"], idx)).encode())
 
                 #2.5
