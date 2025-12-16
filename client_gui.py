@@ -68,7 +68,7 @@ class NewsClientGUI:
         self.clear_screen()
         tk.Label(self.root, text="Headlines Menu").pack(pady=10)
 
-        tk.Button(self.root, text="Search by Keyword", command=lambda: self.simple_request("1.1")).pack()
+        tk.Button(self.root, text="Search by Keyword", command=lambda: self.param_request("1.1", None)).pack()
         tk.Button(self.root, text="Search by Category", command=lambda: self.param_request("1.2", categories)).pack()
         tk.Button(self.root, text="Search by Country", command=lambda: self.param_request("1.3", countries)).pack()
         tk.Button(self.root, text="List All Headlines", command=lambda: self.simple_request("1.4")).pack()
@@ -99,19 +99,25 @@ class NewsClientGUI:
         server_req = recv_text(self.sock)
 
         self.clear_screen()
-        tk.Label(self.root, text=f"Enter parameter ({', '.join(allowed)})").pack()
-        entry = tk.Entry(self.root)
-        entry.pack()
+        tk.Label(self.root, text=f"{server_req}: Enter value").pack()
+        
+        entry = tk.Entry(self.root,width=50)
+        entry.pack(pady=5)
 
         def send_param():
             value = entry.get().strip().lower()
-            if value not in allowed:
+            if not value:
                 messagebox.showerror("Error", "Invalid value")
+                return
+             
+            if allowed is not None and value not in allowed:
+                messagebox.showerror("Error", f"Invalid value. Allowed: {allowed}")
                 return
             self.sock.sendall(value.encode())
             self.show_list(recv_json(self.sock), option)
 
-        tk.Button(self.root, text="Send", command=send_param).pack()         
+        tk.Button(self.root, text="Send", command=send_param).pack()  
+        tk.Button(self.root, text="Back", command=self.headlines_menu).pack()       
 # ---------- Display ----------
     def show_list(self, items):
         self.full_list = items
