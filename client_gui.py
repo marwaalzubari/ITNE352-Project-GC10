@@ -111,9 +111,7 @@ class NewsClientGUI:
             self.sock.sendall(value.encode())
             self.show_list(recv_json(self.sock), option)
 
-        tk.Button(self.root, text="Send", command=send_param).pack()
-          
-        
+        tk.Button(self.root, text="Send", command=send_param).pack()         
 # ---------- Display ----------
     def show_list(self, items):
         self.full_list = items
@@ -124,6 +122,25 @@ class NewsClientGUI:
             text = item.get("title") or item.get("name")
             listbox.insert(tk.END, f"{i}) {text}")
         listbox.pack()
+    
+        def show_details():
+            if not listbox.curselection():
+                return
+            idx = listbox.curselection()[0]
+            self.sock.sendall(str(idx).encode())
+            detail = recv_json(self.sock)
+            self.show_details_screen(detail)
+
+        tk.Button(self.root, text="Show Details", command=show_details).pack(pady=5)
+        tk.Button(self.root, text="Back", command=self.build_main_menu).pack()
+
+    def show_details_screen(self, detail):
+        self.clear_screen()
+        text = tk.Text(self.root, width=80, height=20)
+        for k, v in detail.items():
+            text.insert(tk.END, f"{k}: {v}\n")
+        text.pack()
+        tk.Button(self.root, text="Back", command=self.build_main_menu).pack(pady=10)
  # ---------- Quit ----------
     def quit(self):
         try:
