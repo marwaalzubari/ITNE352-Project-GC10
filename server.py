@@ -31,14 +31,14 @@ def save_json(client_name, option, data):
 #####################################(Option 1 – Headlines)#######################################
 
 def limit_results(articles):
-    return articles[:15] if len(articles) > 15 else articles
+    return articles[:15] if len(articles) > 15 else articles 
 
 
 def build_brief_list(articles):
     brief = []
     for a in articles:
         brief.append({
-            "source": a["source"]["name"],
+            "source": a.get("source", {}).get("name", "N/A"),
             "author": a.get("author", "N/A"),
             "title": a.get("title", "No title")
         })
@@ -55,7 +55,7 @@ def build_details(article):
         publish_time = "N/A"
 
     return {
-        "source": article["source"]["name"],
+        "source": article.get("source", {}).get("name", "N/A"),
         "author": article.get("author", "N/A"),
         "title": article.get("title", "N/A"),
         "url": article.get("url", "N/A"),
@@ -63,12 +63,30 @@ def build_details(article):
         "publish_date": publish_date,
         "publish_time": publish_time
     }
-
+    
+  # -------- API wrappers with ERROR HANDLING --------
+def fetch_articles(url):
+  response = requests.get(url)
+  data = response.json()
+  if data.get("status") != "ok":
+      return {"data": data, "brief_list": [], "full_articles": []}
+  articles = limit_results(data.get("articles", []))
+  return {
+     "data": data,
+     "brief_list": build_brief_list(articles),
+     "full_articles": articles
+}  
 
 def search_by_keyword(keyword):
     url = f"https://newsapi.org/v2/everything?q={keyword}&apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+      return {
+        "data": data,
+        "brief_list": [],
+        "full_articles": []
+    }
     articles = limit_results(data.get("articles", []))
     return {
         "data": data,  # >>> ADD (needed for saving)
@@ -76,23 +94,33 @@ def search_by_keyword(keyword):
         "full_articles": articles
     }
 
-
 def search_by_category(category):
     url = f"https://newsapi.org/v2/top-headlines?category={category}&apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+     return {
+        "data": data,
+        "brief_list": [],
+        "full_articles": []
+    }
     articles = limit_results(data.get("articles", []))
     return {
         "data": data,
         "brief_list": build_brief_list(articles),
         "full_articles": articles
     }
-
 
 def search_by_country(country):
     url = f"https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+     return {
+        "data": data,
+        "brief_list": [],
+        "full_articles": []
+    }
     articles = limit_results(data.get("articles", []))
     return {
         "data": data,
@@ -100,16 +128,21 @@ def search_by_country(country):
         "full_articles": articles
     }
 
-
 def list_all_headlines():
-    url = f"https://newsapi.org/v2/top-headlines?apiKey={API_KEY}"
+    url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+     return {
+        "data": data,
+        "brief_list": [],
+        "full_articles": []
+    }
     articles = limit_results(data.get("articles", []))
     return {
-        "data": data,
-        "brief_list": build_brief_list(articles),
-        "full_articles": articles
+       "data": data,
+       "brief_list": build_brief_list(articles),
+       "full_articles": articles
     }
 
 
@@ -143,12 +176,33 @@ def build_sources_details(source):
         "category": source.get("category", "N/A"),
         "language": source.get("language", "N/A")
     }
+    
+def fetch_sources(url):
+   response = requests.get(url)
+   data = response.json()
+
+   if data.get("status") != "ok":
+      return {"data": data, "brief_list": [], "full_list": []}
+
+
+   sources = limit_sources(data.get("sources", []))
+   return {
+      "data": data,
+      "brief_list": build_sources_brief_list(sources),
+      "full_list": sources
+}
 
 
 def sources_by_category(category):
     url = f"https://newsapi.org/v2/top-headlines/sources?category={category}&apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+     return {
+        "data": data,
+        "brief_list": [],
+        "full_list": []
+    }
     sources = limit_sources(data.get("sources", []))
     return {
         "data": data,
@@ -161,6 +215,12 @@ def sources_by_country(country):
     url = f"https://newsapi.org/v2/top-headlines/sources?country={country}&apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+     return {
+        "data": data,
+        "brief_list": [],
+        "full_list": []
+    }
     sources = limit_sources(data.get("sources", []))
     return {
         "data": data,
@@ -173,6 +233,12 @@ def sources_by_language(language):
     url = f"https://newsapi.org/v2/top-headlines/sources?language={language}&apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+     return {
+        "data": data,
+        "brief_list": [],
+        "full_list": []
+    }
     sources = limit_sources(data.get("sources", []))
     return {
         "data": data,
@@ -185,6 +251,12 @@ def list_all_sources():
     url = f"https://newsapi.org/v2/top-headlines/sources?apiKey={API_KEY}"
     response = requests.get(url)
     data = response.json()
+    if data.get("status") != "ok":
+     return {
+        "data": data,
+        "brief_list": [],
+        "full_list": []
+    }
     sources = limit_sources(data.get("sources", []))
     return {
         "data": data,
@@ -234,10 +306,11 @@ def handle_client(conn, addr):
 
                     conn.send(json.dumps(results["brief_list"]).encode())
 
-                    idx_data = conn.recv(1024).decode().strip()############
+                    idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                      conn.send("BACK".encode())
+                      break
                             
                         # error handling
                     try:
@@ -264,7 +337,8 @@ def handle_client(conn, addr):
                     idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                     conn.send("BACK".encode())
+                     break
 
                         # error handling
                     try:
@@ -290,7 +364,8 @@ def handle_client(conn, addr):
                     idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                     conn.send("BACK".encode())
+                     break 
 
                         # error handling
                     try:
@@ -313,7 +388,8 @@ def handle_client(conn, addr):
                     idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                     conn.send("BACK".encode())
+                     break  
 
                         # error handling
                     try:
@@ -355,7 +431,8 @@ def handle_client(conn, addr):
                     idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                     conn.send("BACK".encode())
+                     break
 
                         # error handling
                     try:
@@ -381,7 +458,8 @@ def handle_client(conn, addr):
                     idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                      conn.send("BACK".encode())
+                      break 
 
                         # error handling
                     try:
@@ -407,7 +485,8 @@ def handle_client(conn, addr):
                     idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                      conn.send("BACK".encode())
+                      break
 
                         # error handling
                     try:
@@ -430,7 +509,8 @@ def handle_client(conn, addr):
                     idx_data = conn.recv(1024).decode().strip()
 
                     if idx_data == "BACK":
-                      continue  
+                      conn.send("BACK".encode())
+                      break
 
                         # error handling
                     try:
