@@ -1,5 +1,1228 @@
 {
-    "status": "error",
-    "code": "parametersMissing",
-    "message": "Required parameters are missing, the scope of your search is too broad. Please set any of the following required parameters and try again: q, qInTitle, sources, domains."
+    "status": "ok",
+    "totalResults": 68987,
+    "articles": [
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Lauren Feiner",
+            "title": "House overhauls KOSA in a new kids online safety package",
+            "description": "The House Energy and Commerce Committee released a package of 19 bills aimed at protecting kids on the internet, teeing Congress up for a chance at passing some of the most substantive internet regulations in recent history, alongside a fight over online spee\u2026",
+            "url": "https://www.theverge.com/news/829492/house-energy-commerce-kids-online-safety-package",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25262997/STK461_INTERNET_CHILD_SAFETY_E_Stock_CVirginia.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+            "publishedAt": "2025-11-25T23:05:55Z",
+            "content": "<ul><li></li><li></li><li></li></ul>\r\nThe package of 19 bills also includes an app store age verification bill.\r\nThe package of 19 bills also includes an app store age verification bill.\r\nby\r\nLauren \u2026 [+4276 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Higher proportion contacting GPs online than by phone in England",
+            "description": "All NHS practices were required by the government to provide web bookings from October.",
+            "url": "https://www.bbc.com/news/articles/c4g47gvy7wjo",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/e8c6/live/0a897190-d00c-11f0-be9b-5d3335f84177.jpg",
+            "publishedAt": "2025-12-03T05:49:21Z",
+            "content": "A higher proportion of people in England are now contacting their GP surgery online than by phone, according to new data from the Office for National Statistics (ONS).\r\nData covering three weeks from\u2026 [+2146 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Zo\u00eb Schiffer, Leah Feiger",
+            "title": "WIRED Roundup: Fandom in Politics, Zuckerberg\u2019s Illegal School, and Nepal\u2019s Discord Revolution",
+            "description": "In this episode of \u201cUncanny Valley,\u201d we run through the top stories of the week and examine how some of the victories in the US November elections show the power of online fandom.",
+            "url": "https://www.wired.com/story/uncanny-valley-podcast-wired-roundup-fandom-politics-zuckerberg-illegal-school-nepal-discord-revolution/",
+            "urlToImage": "https://media.wired.com/photos/690d33511c96ff7ae4b99889/191:100/w_1280,c_limit/Uncanny-Valley-Zohran-Fandom-2243511052.jpg",
+            "publishedAt": "2025-11-17T22:11:19Z",
+            "content": "Leah Feiger: Zo\u00eb, I am obsessed with this story. Before you continue, I think that it's really important to say that Caroline, the lovely reporter of this story on your business desk, obtained 1,665 \u2026 [+2265 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": "Melissa Sharman, Daniel Austin",
+            "title": "Team GB athletes given AI-based online abuse help",
+            "description": "Team GB Olympic and Paralympic athletes are to be offered a new form of artificial intelligence-based protection from online abuse.",
+            "url": "https://www.bbc.com/sport/olympics/articles/c1kp44782vjo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_sport/1200/cpsprodpb/3fd2/live/c5030e60-d0e7-11f0-b0cc-cf4d0e5d41e2.jpg",
+            "publishedAt": "2025-12-04T08:00:16Z",
+            "content": "The app, called Social Protect, uses AI to try to ensure athletes see as few abusive messages sent their way as possible.\r\nIt automatically scans incoming social media posts on platforms including In\u2026 [+1146 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Online classes and construction ban as toxic haze covers Delhi",
+            "description": "A toxic haze engulfed Delhi on Monday, affecting visibility on the road and delaying flights and trains.",
+            "url": "https://www.bbc.com/news/articles/c04v39dk053o",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/0ab0/live/5cefe9f0-d985-11f0-aae2-2191c0e48a3b.jpg",
+            "publishedAt": "2025-12-15T06:29:59Z",
+            "content": "Schools in Delhi and surrounding areas have moved classes online and construction has been banned as the Indian capital grapples with hazardous air quality.\r\nOn Monday morning, a toxic haze engulfed \u2026 [+2489 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Bruce Gil",
+            "title": "Wikipedia Has Its Own Version of \u2018Wrapped\u2019 Now, But There\u2019s One Little Problem",
+            "description": "The online encyclopedia is offering personalized stats on users' reading habits, along with a list of the year\u2019s most-read articles.",
+            "url": "https://gizmodo.com/wikipedia-has-its-own-version-of-wrapped-now-but-theres-one-little-problem-2000696361",
+            "urlToImage": "https://gizmodo.com/app/uploads/2025/01/WikiHed-1200x675.jpg",
+            "publishedAt": "2025-12-05T21:45:44Z",
+            "content": "Its that time of year when our apps use all the data they collect on us to spit out personalized insights about how we spent our time over the past 12 months. Spotify, which really kicked off this tr\u2026 [+2332 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Scammers hacked her phone and stole thousands - so how did they get her details?",
+            "description": "Sue Shore told the BBC how scammers targeted her - and we found her information had been leaked online.",
+            "url": "https://www.bbc.com/news/articles/czrk7gxk2l6o",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/9acc/live/a3e62480-c979-11f0-8c06-f5d460985095.jpg",
+            "publishedAt": "2025-11-25T04:58:08Z",
+            "content": "Joe TidyCyber correspondent, BBC World Service\r\nSue had her digital life hijacked by scammers\r\nData breaches are getting so common that it can be hard to know how to react when it happens to you. It'\u2026 [+6022 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "An angry confrontation and online abuse: Inside the asylum protests in a divided town",
+            "description": "A Disclosure documentary uncovers the figures behind the protests around asylum hotels which have divided communities.",
+            "url": "https://www.bbc.com/news/articles/c23evz4jen3o",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/a4b3/live/d9b27d20-cc62-11f0-a892-01d657345866.jpg",
+            "publishedAt": "2025-12-01T00:38:45Z",
+            "content": "The footage filmed by the woman was seen by millions of people\r\nWe were filming an interview on the outskirts of a public park in Falkirk when a woman approached.\r\n\"Can I just ask why you're encourag\u2026 [+11202 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Todd Haselton",
+            "title": "Ninja\u2019s versatile Creami ice cream maker hits an all-time low for Black Friday",
+            "description": "Ice cream in December? Oh hell yeah. Ninja\u2019s Creami Scoop & Swirl ice cream maker is 20 percent off for Black Friday, dropping it to a new all-time low of $279.99 at Amazon, Best Buy, and SharkNinja\u2019s online storefront. It can make hard and soft serve ice cre\u2026",
+            "url": "https://www.theverge.com/gadgets/832870/black-friday-ninja-swirl-creami-ice-cream-maker-deal-sale-2025",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Screenshot-2025-11-28-at-8.27.26%E2%80%AFPM.png?quality=90&strip=all&crop=0%2C3.5567729285007%2C100%2C92.886454142999&w=1200",
+            "publishedAt": "2025-11-29T01:45:51Z",
+            "content": "<ul><li></li><li></li><li></li></ul>\r\nRum raisin is the GOAT.\r\nby\r\nTodd HaseltonClose\r\nTodd Haselton\r\nDeputy Editor, Reviews and Commerce\r\nPosts from this author will be added to your daily email dig\u2026 [+2146 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Terrence O\u2019Brien",
+            "title": "Wikipedia is getting in on the yearly wrapped game",
+            "description": "Everyone is doing it, so why not Wikipedia? Everyone\u2019s favorite free online encyclopedia has decided to launch its own customized Year in Review feature on its mobile app. Of course, you\u2019ll need the app installed and have been using it for the feature to be o\u2026",
+            "url": "https://www.theverge.com/news/838989/wikipedia-year-in-review-2025-wrapped",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/acastro_STK013_02.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+            "publishedAt": "2025-12-05T16:47:19Z",
+            "content": "<ul><li></li><li></li></ul>\r\nIf youve been using the mobile app, youll get data about all the rabbit holes you went down.\r\nIf youve been using the mobile app, youll get data about all the rabbit hole\u2026 [+2358 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Barbara Krasnoff",
+            "title": "Some of the stuff we bought during Black Friday and Cyber Monday",
+            "description": "It\u2019s one thing to do a bit of online shopping during the Black Friday / Cyber Monday sales, but it\u2019s another to put your money where your mouth is. (Where\u00a0did\u00a0that phrase come from, anyway?) If you\u2019re curious what our writers, editors, and reviewers bought fo\u2026",
+            "url": "https://www.theverge.com/gadgets/835160/black-friday-cyber-monday-deals-staff-shopping",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/death-stranding-2.jpg?quality=90&strip=all&crop=0%2C3.4750998734523%2C100%2C93.049800253095&w=1200",
+            "publishedAt": "2025-12-02T14:48:23Z",
+            "content": "<ul><li></li><li></li><li></li></ul>\r\nTVs, Lego plants, and video games were among the items that we looked for during the extended sales period.\r\nTVs, Lego plants, and video games were among the ite\u2026 [+6225 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Dominic Preston",
+            "title": "The VPN panic is only getting started",
+            "description": "After the Online Safety Act's onerous internet age restrictions took effect this summer, it didn't take long for Brits to get around them. Some methods went viral, like using video game Death Stranding's photo mode to bypass face scans. But in the end, the si\u2026",
+            "url": "https://www.theverge.com/tech/827435/uk-vpn-restrictions-ban-online-safety-act",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STKS520_ANONYMITY_CVIRGINIA_B.jpg?quality=90&strip=all&crop=0%2C9.9676601489831%2C100%2C80.064679702034&w=1200",
+            "publishedAt": "2025-11-26T14:28:53Z",
+            "content": "<ul><li></li><li></li><li></li></ul>\r\nThe UK government is facing calls to restrict childrens access to VPNs.\r\nThe UK government is facing calls to restrict childrens access to VPNs.\r\nby\r\nDominic Pre\u2026 [+8576 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Jay Slater's mum says online trolls sent her 'to hell and back' after he disappeared in Tenerife",
+            "description": "The mother of a teenager who died in Tenerife is campaigning for Jay's Law to help prevent the online trolling of grieving families.",
+            "url": "https://www.bbc.com/news/articles/cz7n3wgp5wlo",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/2d9e/live/4a359930-6942-11f0-af20-030418be2ca5.jpg",
+            "publishedAt": "2025-11-21T12:36:02Z",
+            "content": "Gina MillsonPolitics reporter, BBC Lancashire\r\nJay Slater's mum Debbie Duncan said social media was helpful initially but then conspiracies started\r\nThe mother of Jay Slater, who died after going mis\u2026 [+2674 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Mum of two left penniless by Tinder scammer",
+            "description": "A mother of two tells the BBC she felt \"embarrassed\" and \"stupid\" after giving her savings away to a fraudster she met online.",
+            "url": "https://www.bbc.com/news/articles/c14p63n4v2go",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/bd10/live/3cd900f0-c3ca-11f0-ae46-bd64331f0fd4.jpg",
+            "publishedAt": "2025-11-23T01:53:41Z",
+            "content": "Catriona MacPheeBBC Disclosure\r\nChristopher Harkins was jailed for 12 years\r\nA mother of two says she was left penniless after giving her savings to Tinder predator Christopher Harkins in a fake inve\u2026 [+5183 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Harvard Business Review"
+            },
+            "author": "Daniel Corsten, Luigi Laporte, Srikanth Jagabathula",
+            "title": "Improving Substitutions in Online Ordering",
+            "description": "New research found that three levers\u2014availability, personalization, and efficiency\u2014can turn a costly nuisance into a growth opportunity.",
+            "url": "https://hbr.org/2025/11/improving-substitutions-in-online-ordering",
+            "urlToImage": "https://hbr.org/resources/images/article_assets/2025/11/Nov25_12_-9228132_-4127460_-47135946_-9016558_-8490369_-6169009_-31575078.jpg",
+            "publishedAt": "2025-11-17T13:00:00Z",
+            "content": "I ordered raspberries. They send me cauliflowers. Thats how a Californian shopper described their online grocery experience buying groceries from Walmart using the Instacart app. Our fieldwork has re\u2026 [+209 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Slashdot.org"
+            },
+            "author": "msmash",
+            "title": "The Inevitable Shape of Cheap Online Retail",
+            "description": "Pinduoduo in China, Shopee in Southeast Asia, and Meesho in India operate in markets that could hardly be more different -- an upper-middle-income industrial state, a stitched-together archipelago of under-banked economies, and a country where three-quarters \u2026",
+            "url": "https://slashdot.org/story/25/12/09/1941236/the-inevitable-shape-of-cheap-online-retail",
+            "urlToImage": "https://a.fsdn.com/sd/topics/business_64.png",
+            "publishedAt": "2025-12-09T20:01:00Z",
+            "content": "Pinduoduo in China, Shopee in Southeast Asia, and Meesho in India operate in markets that could hardly be more different -- an upper-middle-income industrial state, a stitched-together archipelago of\u2026 [+1219 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "John Semley",
+            "title": "People Are Already Taking This Unapproved New Weight-Loss Drug",
+            "description": "Retatrutide, originally developed by Eli Lilly, has found a loyal fan base\u2014even though clinical trials of the drug still haven\u2019t finished.",
+            "url": "https://www.wired.com/story/people-are-already-taking-this-unapproved-new-weight-loss-drug-triple-g-retatrutide/",
+            "urlToImage": "https://media.wired.com/photos/68f7c5f862883d2cd39ed9ed/191:100/w_1280,c_limit/101625_Retatrutide.jpg",
+            "publishedAt": "2025-12-12T11:30:00Z",
+            "content": "Such endorsements abound online. Other reta boosters also flag its alleged ability to reduce cravings for drugs and alcohol. (Some clinical literature has suggested the potential of GLP-1-type drugs \u2026 [+2332 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Jordan Hart",
+            "title": "The one thing to watch for when shopping online this holiday season",
+            "description": "Tariffs could an extra fees to your online holiday purchases. Read the fine print when shopping online to avoid unexpected customs charges.",
+            "url": "https://www.businessinsider.com/avoid-surprise-tariffs-and-extra-fees-holiday-shopping-ups-fedex-2025-12",
+            "urlToImage": "https://i.insider.com/693c565604eda4732f2d734b?width=1200&format=jpeg",
+            "publishedAt": "2025-12-12T21:45:10Z",
+            "content": "Shipping companies and retailers provide guidanceJustin Sullivan/Getty Images\r\n<ul><li>Tariffs are an important factor when online shopping this holiday season.</li><li>From Amazon to independent sel\u2026 [+3319 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Slashdot.org"
+            },
+            "author": "EditorDavid",
+            "title": "AI Helps Drive Record $11.8B in Black Friday Online Spending",
+            "description": "Earlier this month MasterCard noted that even Walmart now allows its customers to make purchases through ChatGPT. And after polling more than 4,000 consumers in the U.S., Canada, U.K., and UAE, they found \"more than four in 10 consumers already use AI tools t\u2026",
+            "url": "https://slashdot.org/story/25/11/30/0245229/ai-helps-drive-record-118b-in-black-friday-online-spending",
+            "urlToImage": "https://a.fsdn.com/sd/topics/business_64.png",
+            "publishedAt": "2025-11-30T04:34:00Z",
+            "content": "Earlier this month MasterCard noted that even Walmart now allows its customers to make purchases through ChatGPT. And after polling more than 4,000 consumers in the U.S., Canada, U.K., and UAE, they \u2026 [+3173 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Hackaday"
+            },
+            "author": "Ian Bos",
+            "title": "An Online Repository for KiCad Schematics",
+            "description": "In the desktop 3D printing world, we\u2019re fortunate to have multiple online repositories of models that anyone can load up on their machine. Looking to create a similar experience but \u2026read more",
+            "url": "https://hackaday.com/2025/11/28/an-online-repository-for-kicad-schematics/",
+            "urlToImage": "https://hackaday.com/wp-content/uploads/2025/11/circuitsnaps_feat.png",
+            "publishedAt": "2025-11-28T15:00:00Z",
+            "content": "In the desktop 3D printing world, we\u2019re fortunate to have multiple online repositories of models that anyone can load up on their machine. Looking to create a similar experience but for electronic pr\u2026 [+1121 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNET"
+            },
+            "author": "Kourtnee Jackson",
+            "title": "Netflix Drops 'Stranger Things 5' Finale Screening Locations, So Get Your Tickets",
+            "description": "Get in the online queue to grab tickets for the ballyhooed theater event.",
+            "url": "https://www.cnet.com/tech/services-and-software/netflix-drops-stranger-things-5-finale-screening-locations-so-get-your-tickets/",
+            "urlToImage": "https://www.cnet.com/a/img/resize/d0d773c15e242e2543d5ff8bbad444ccbf62e21e/hub/2025/10/23/6698752f-1c1c-49b2-933b-ed57f6bc5589/strangerthings-5-netflix.jpg?auto=webp&fit=crop&height=675&width=1200",
+            "publishedAt": "2025-12-02T16:29:18Z",
+            "content": "This month,\u00a0Stranger Things 5 is slated to be a farewell and a fan celebration, with the finale episode debuting in movie theaters as a celebratory event. On Tuesday, Netflix\u00a0shared a list of all par\u2026 [+1352 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Marah Eakin",
+            "title": "Jon M. Chu Says AI Couldn\u2019t Have Made One of Wicked\u2019s Best Moments",
+            "description": "The Wicked: For Good director says being able to improvise on set allows for the kind of moments that are hard for machines to make.",
+            "url": "https://www.wired.com/story/big-interview-event-jon-chu-wicked/",
+            "urlToImage": "https://media.wired.com/photos/6931df95b65440373b95fd64/191:100/w_1280,c_limit/Jon-Chu-Big-Interview-2025-4.jpg",
+            "publishedAt": "2025-12-04T20:18:26Z",
+            "content": "If theres anyone who understands the importance of viral marketing, its Wicked: For Good director Jon M. Chu.\r\nAt WIREDs Big Interview event in San Francisco, the onetime YouTuber and Crazy Rich Asia\u2026 [+2455 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNET"
+            },
+            "author": "Omar Gallaga",
+            "title": "Roblox Rolls Out Age-Verification Requirement for Chat Amid Child Safety Criticism",
+            "description": "The age-verification tool uses facial recognition to put players into specific age groups before they can chat online.",
+            "url": "https://www.cnet.com/tech/gaming/roblox-rolls-out-age-verification-requirement-for-chat-amid-child-safety-criticism/",
+            "urlToImage": "https://www.cnet.com/a/img/resize/79ffae8fef3510818dd9fc9d900858328dc9de18/hub/2025/11/18/0df996ed-2003-41f0-b786-2635289ac8dc/en-age-check-flow-1.png?auto=webp&fit=crop&height=675&width=1200",
+            "publishedAt": "2025-11-18T16:19:57Z",
+            "content": "Roblox, the online game platform that has been under fire due to child safety concerns, has introduced age-verification software that uses facial scanning to estimate the age of players.\u00a0\r\nThe system\u2026 [+2686 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Android Central"
+            },
+            "author": "nickodiaz@sbcglobal.net (Nickolas Diaz) , Nickolas Diaz",
+            "title": "Perplexity's Comet for Android is an AI browsing companion for anything online",
+            "description": "Perplexity launched its AI browser, Comet, for Android users.",
+            "url": "https://www.androidcentral.com/apps-software/ai/perplexitys-comet-for-android-is-an-ai-browsing-companion-for-anything-online",
+            "urlToImage": "https://cdn.mos.cms.futurecdn.net/QkMRbmeJ7LKaUjzxH8C5LB-1914-80.jpg",
+            "publishedAt": "2025-11-21T20:23:21Z",
+            "content": "What you need to know\r\n<ul><li>Perplexity launches its Comet for Android AI web browser, capable of handling tasks users give it, like shopping and creating tests from online textbooks.</li><li>Comet\u2026 [+2830 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Germain Lussier",
+            "title": "Here Are All the Awesome-Sounding Genre Films Coming to Sundance 2026",
+            "description": "New films by Kogonada, Cathy Yan, Andrew Stanton, and more will be playing at the legendary festival next month.",
+            "url": "https://gizmodo.com/sundance-2026-genre-films-2000697939",
+            "urlToImage": "https://gizmodo.com/app/uploads/2025/12/Buddy-movie-1200x675.jpg",
+            "publishedAt": "2025-12-10T19:05:56Z",
+            "content": "The 2026 Sundance Film Festival is right around the corner, and it\u2019s a big one. It\u2019s the first since the passing of co-founder Robert Redford, and it\u2019s the last one taking place in Park City, UT, whi\u2026 [+4900 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Hackaday"
+            },
+            "author": "Lewin Day",
+            "title": "Wago\u2019s Online Community Is Full Of Neat Wago Tools",
+            "description": "Wago connectors are somewhat controversial in the electrical world\u2014beloved by some, decried by others. The company knows it has a dedicated user base, though, and has established the Wago Creators \u2026read more",
+            "url": "https://hackaday.com/2025/12/02/wagos-online-community-is-full-of-neat-wago-tools/",
+            "urlToImage": "https://hackaday.com/wp-content/uploads/2025/11/small_3_0d48f9ad7f-e1764306938744.jpg",
+            "publishedAt": "2025-12-03T03:00:23Z",
+            "content": "Wago connectors are somewhat controversial in the electrical worldbeloved by some, decried by others. The company knows it has a dedicated user base, though, and has established the Wago Creators sit\u2026 [+1152 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Eugene Kim",
+            "title": "Morgan Stanley: Nearly half of online shoppers will use AI agents by 2030, adding $115 billion to US e-commerce",
+            "description": "Morgan Stanley predicts AI-powered agents will transform online shopping and add $115 billion to US e-commerce by 2030.",
+            "url": "https://www.businessinsider.com/morgan-stanley-expects-ai-agents-to-fuel-e-commerce-boom-2025-11",
+            "urlToImage": "https://i.insider.com/692670b5e1a9cbb014df0195?width=1200&format=jpeg",
+            "publishedAt": "2025-11-27T10:00:03Z",
+            "content": "UPS delivery person with loaded hand truck on sidewalk in Manhattan, New York.Lindsey Nicholson/UCG/Universal Images Group via Getty Images\r\n<ul><li>Morgan Stanley predicts AI shopping agents will ad\u2026 [+2910 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNET"
+            },
+            "author": "Tyler Lacoma",
+            "title": "Prices Set by Algorithms: New Yorkers Now See Warnings About Stores Using Personal Data to Set Costs",
+            "description": "This new law, already subject to lawsuits, lets shoppers know when companies are quietly raising online prices for certain types of customers.",
+            "url": "https://www.cnet.com/tech/services-and-software/prices-set-by-algorithms-new-yorkers-now-see-warnings-about-stores-using-personal-data-to-set-costs/",
+            "urlToImage": "https://www.cnet.com/a/img/resize/ff8a0d418a55c07468602eb4206fefb592f8d38a/hub/2025/12/04/05cd254f-9b10-4b61-892f-f26ec371ec81/gettyimages-946928232.jpg?auto=webp&fit=crop&height=675&width=1200",
+            "publishedAt": "2025-12-04T01:46:10Z",
+            "content": "Algorithm-based pricing changes are now common. Some laws are pushing back.\r\nWestend61 via Getty\r\nOnline shoppers in New York are now seeing a new warning on product pages thanks to consumer protecti\u2026 [+3256 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NPR"
+            },
+            "author": "Vanessa Romo",
+            "title": "What's on your TikTok page? U.S. looks to scour tourists' online profiles",
+            "description": "Foreign visitors who are eligible to bypass the visa application process may soon have to turn over five years' worth of social media history to enter the U.S., under a new Trump administration plan.",
+            "url": "https://www.npr.org/2025/12/11/nx-s1-5641086/tourists-social-media-screening-changes",
+            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3400x1913+0+198/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd2%2F6b%2Fac472ade46569d2c52770de7a6ec%2Fap111213032183.jpg",
+            "publishedAt": "2025-12-12T02:03:04Z",
+            "content": "The Trump administration is proposing new rules that would further tighten its grip on who's allowed into the U.S., asking visitors from several dozen countries that benefit from visa-free travel to \u2026 [+4384 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NPR"
+            },
+            "author": "Rachel Treisman",
+            "title": "Brian Walshe, who searched for crime tips online, is convicted of his wife's murder",
+            "description": "Walshe said his wife left town for a work emergency in January 2023. Investigators found items like a hacksaw, bloody rugs and her COVID vaccine card in dumpsters \u2014 and chilling searches on his devices.",
+            "url": "https://www.npr.org/2025/12/15/nx-s1-5644688/brian-walshe-guilty-murder-dismember-wife",
+            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3000x1688+0+0/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F15%2F90%2Fa7d6f34248a7ba68101e4e3432c8%2Fap25349618056415.jpg",
+            "publishedAt": "2025-12-15T19:12:51Z",
+            "content": "Brian Walshe admitted to disposing of his wife's body but denied killing her, in a case that has drawn significant national attention for the last two years. On Monday, a Massachusetts jury found him\u2026 [+9991 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Watch Australian teens test out social media after ban kicks in",
+            "description": "Teenagers affected by Australia's under 16 social media showed the BBC what happened when they tried to access their accounts.",
+            "url": "https://www.bbc.com/news/videos/c3e0p8jj84lo",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/e5bf/live/a7d6d590-d580-11f0-9fb5-5f3a3703a365.jpg",
+            "publishedAt": "2025-12-10T04:38:55Z",
+            "content": "Australia has banned social media for everyone under the age of 16. The government says the ban is aimed at protecting young people from harmful content online. As the law came into effect, the BBC s\u2026 [+102 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": null,
+            "title": "Acclaimed 2023 PS5, PS4 Game Shutting Down Online Service",
+            "description": null,
+            "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_c8ab0f37-2269-4460-95c7-6947acaea5ed",
+            "urlToImage": null,
+            "publishedAt": "2025-12-11T12:28:44Z",
+            "content": "If you click 'Accept all', we and our partners, including 241 who are part of the IAB Transparency &amp; Consent Framework, will also store and/or access information on a device (in other words, use \u2026 [+714 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "KOIN.com"
+            },
+            "author": "Joelle Jones",
+            "title": "Olympic Pipeline partially online; drivers should be OK",
+            "description": "AAA Oregon/Idaho Public Affairs Director Marie Dodds called the partial reopening encouraging news, ahead of what she expects will be record holiday travel.",
+            "url": "https://www.koin.com/news/oregon/olympic-pipeline-partially-online-drivers-should-be-ok/",
+            "urlToImage": "https://media.zenfs.com/en/koin_articles_940/7f2b106b2e7cb34ccc90b85f9f5f84fc",
+            "publishedAt": "2025-11-26T01:31:07Z",
+            "content": "PORTLAND, Ore. (KOIN) The Pacific Northwests main fuel artery is partially back online after a two-week shutdown forced Oregon and Washington governors to declare fuel emergencies sparking concerns a\u2026 [+3654 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Jordan Hart",
+            "title": "Black Friday hot sellers: US consumers are expected to spend $11.7 billion online. Here's what's set to go fastest.",
+            "description": "Black Friday online sales are expected to break a record, fueled in part by AI shopping and discounts, Adobe data said. These are the hottest items.",
+            "url": "https://www.businessinsider.com/online-shopping-black-friday-expected-break-record-2025-11",
+            "urlToImage": "https://i.insider.com/6929bed789026fbb4d0e996f?width=1200&format=jpeg",
+            "publishedAt": "2025-11-28T17:42:36Z",
+            "content": "Consumers are expected to spend $11.7 billion online.Eduardo Munoz Alvarez/Getty Images\r\n<ul><li>US consumers are projected to spend a record $11.7 billion online this Black Friday.</li><li>Expected \u2026 [+2027 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Katie Notopoulos",
+            "title": "The Grinch is more popular than ever. There's a new McDonald's meal and tons of Christmas merch. Here's why it happened.",
+            "description": "The Grinch seems to be everywhere lately. At McDonald's. In the aisles at Walmart. In memes online. It's a sign of our times.",
+            "url": "https://www.businessinsider.com/grinch-meal-mcdonalds-christmas-movie-show-memes-toys-2025-12",
+            "urlToImage": "https://i.insider.com/693af39d832e0ef1ead60e3d?width=1200&format=jpeg",
+            "publishedAt": "2025-12-12T10:01:01Z",
+            "content": "The Grinch is everywhere: in movies, on store shelves, at McDonald's \u2014 and at this NFL game where a fan dressed as the green character.AP Photo/Maria Lysaker\r\n<ul><li>McDonald's \"Grinch Meal\" with pi\u2026 [+6586 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Henry Chandonnet",
+            "title": "Bill Ackman proposed a straightforward line for young men to meet women \u2014\u00a0and the memes erupted",
+            "description": "Bill Ackman wrote on X that his go-to line used to be, \"May I meet you?\" The memes online quickly followed.",
+            "url": "https://www.businessinsider.com/bill-ackman-may-i-meet-you-advice-talking-to-women-2025-11",
+            "urlToImage": "https://i.insider.com/691b3ef289026fbb4d0dc3e9?width=1200&format=jpeg",
+            "publishedAt": "2025-11-17T19:02:32Z",
+            "content": "Bill Ackman's advice to young men now has roughly 4,200 comments on X.PATRICK T. FALLON/AFP via Getty Images\r\n<ul><li>Bill Ackman wrote on X that his go-to line for talking to women used to be, \"May \u2026 [+3734 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Lisa Sparrell",
+            "title": "I didn't think we had enough assets to need a will, and then my husband died",
+            "description": "I didn't think we had enough assets to need a will, and then my husband died. A simple online service helped me create one for my daughter.",
+            "url": "https://www.businessinsider.com/didnt-have-will-husband-died-made-one-online-estate-planning-2025-11",
+            "urlToImage": "https://i.insider.com/691de0f4abd5e944effb0597?width=1200&format=jpeg",
+            "publishedAt": "2025-11-19T16:48:01Z",
+            "content": "The author (not shown) had a change of heart about her need to have a will after her husband died.Worawee Meepian/Getty Images\r\n<ul><li>My husband and I didn't have many assets, so we didn't think a \u2026 [+3853 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Thibault Spirlet",
+            "title": "The US will now review H-1B applicants' social media \u2014 and require them to make profiles public, State Department says",
+            "description": "H-1B applicants and their dependents will face expanded online checks as the US tightens scrutiny of skilled-worker visas, a spokesperson said.",
+            "url": "https://www.businessinsider.com/us-to-review-h-1b-applicants-social-media-state-dept-2025-12",
+            "urlToImage": "https://i.insider.com/6931812771107c9f345750b8?width=1200&format=jpeg",
+            "publishedAt": "2025-12-04T13:06:53Z",
+            "content": "The US will require H-1B applicants to make their social media public for visa vetting, a State Department spokesperson said.Andrew Harnik/Getty Images\r\n<ul><li>The US will review H-1B applicants' so\u2026 [+2785 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Futurism"
+            },
+            "author": "Victor Tangermann",
+            "title": "New Twitter Feature Reveals That Profitable \u201cMAGA\u201d Accounts Are Actually Scammers From the Developing World Cashing in on Gullible Americans",
+            "description": "\"This is total armageddon for the online right.\"",
+            "url": "https://futurism.com/future-society/new-twitter-feature-maga-scammers-foreign",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/mqa3A.HeS1fcxsk5sr5crQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MzA7Y2Y9d2VicA--/https://media.zenfs.com/en/futurism_981/bce95ea76d092eb4495bc3bfec5a74ae",
+            "publishedAt": "2025-11-24T19:14:23Z",
+            "content": "Elon Musks social media echo chamber X-formerly-Twitter introduced a new feature over the weekend that shows the location where its users have been tweeting from a move that has exposed an embarrassi\u2026 [+4780 chars]"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Is Flu Different This Winter?",
+            "description": "The number of people in hospital with flu doubles in a week.",
+            "url": "https://www.bbc.co.uk/sounds/play/p0mn1242",
+            "urlToImage": "https://ichef.bbci.co.uk/images/ic/1024x576/p0l7jnbt.jpg",
+            "publishedAt": "2025-12-11T19:02:00Z",
+            "content": "Available for over a year\r\nToday, the number of people in hospital with the flu has risen by more than half this week.\r\nDoctors say an earlier start to the flu season plus an unexpected mutation in t\u2026 [+1701 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Bruce Gil",
+            "title": "Reddit Sues Australia Over Teen Social Media Ban as Other Nations Consider Similar Laws",
+            "description": "The company says the law violates teens\u2019 political speech rights as other countries consider similar restrictions.",
+            "url": "https://gizmodo.com/reddit-sues-australia-over-teen-social-media-ban-as-other-nations-consider-similar-laws-2000699275",
+            "urlToImage": "https://gizmodo.com/app/uploads/2024/10/A-person-looking-at-Reddit-on-their-phone.jpg",
+            "publishedAt": "2025-12-12T21:00:00Z",
+            "content": "Reddit just challenged Australias new landmark ban on social media accounts for teenagers.\r\nThe message-board site filed a lawsuit on Friday in the countrys highest court to block the law, arguing it\u2026 [+2411 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NPR"
+            },
+            "author": "Shannon Bond",
+            "title": "State Department to deny visas to fact checkers and others, citing 'censorship'",
+            "description": "The order is focused on applicants for H-1B visas, which are frequently used by tech companies and is part of a campaign by the Trump administration against online content moderation.",
+            "url": "https://www.npr.org/2025/12/04/nx-s1-5633444/trump-content-moderation-visas-censorship",
+            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5719x3217+0+298/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F7b%2F76%2Fcc40c11344e1996558b2d52102e1%2Fgettyimages-2177493971.jpg",
+            "publishedAt": "2025-12-04T22:22:06Z",
+            "content": "The State Department is instructing its staff to reject visa applications from people who worked on fact-checking, content moderation or other activities the Trump administration considers \"censorshi\u2026 [+4407 chars]"
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Sydney Bradley,Dan Whateley",
+            "title": "You don't have to 'just Google it': AI chatbots, TikTok, and Reddit are redefining how we search online",
+            "description": "It's never been easier to quit Google search, as consumers turn to TikTok, Reddit, and ChatGPT to find answers.",
+            "url": "https://www.businessinsider.com/google-search-engine-alternatives-reddit-tiktok-ai-chatbots-2025-11",
+            "urlToImage": "https://i.insider.com/6915fdcb89026fbb4d0d934e?width=800&format=jpeg",
+            "publishedAt": "2025-11-21T10:07:01Z",
+            "content": "Getty Images; Tyler Le/BI\r\n<ul><li>Google's dominance is facing new challenges as search habits shift.</li><li>Social apps like TikTok and AI chatbots like ChatGPT are changing how we look for inform\u2026 [+8330 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Troubled.engineer"
+            },
+            "author": null,
+            "title": "I block all online ads",
+            "description": "A couple of years ago, I decided I'd had enough of ads. Not just the occasional banner or a quick pre-roll video \u2014 I mean all of them. They have to go.",
+            "url": "https://troubled.engineer/posts/no-ads/",
+            "urlToImage": null,
+            "publishedAt": "2025-12-07T22:18:59Z",
+            "content": "Ads support content creators and free services. If you value specific creators or platforms, consider supporting them directly through memberships or donations rather than relying solely on ad blocki\u2026 [+6005 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Idaho Statesman"
+            },
+            "author": "Sally Krutzig",
+            "title": "Coroner confirms identity of 7-year-old Meridian boy killed in I-84 crash",
+            "description": "Loved ones have created online fundraisers to support the victim\u2019s parents, and his father is hospitalized.",
+            "url": "https://www.idahostatesman.com/news/local/traffic/article313170499.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/_QaqB2PmjBsijqWfQG4j6g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD05MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/idaho_statesman_mcclatchy_articles_842/4d858123341267a8f71d785af41ecc79",
+            "publishedAt": "2025-11-26T21:29:33Z",
+            "content": "A young boy killed in a Tuesday afternoon accident on Interstate 84 was identified Wednesday, as loved ones launched fundraisers to support his family.\r\nA pickup truck driven by a 31-year-old Meridia\u2026 [+2085 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Detroit Free Press"
+            },
+            "author": "Dan Basso and Jalen Williams, USA TODAY NETWORK",
+            "title": "5,000 without power after snowstorm. Here's where lights are out",
+            "description": "Power companies across Michigan offer multiple ways to report electric outages, see affected areas online.",
+            "url": "https://www.freep.com/story/news/local/michigan/2025/11/28/powers-out-for-some-how-to-check-report-a-power-outage-in-michigan/87508429007/",
+            "urlToImage": "https://media.zenfs.com/en/detroit-free-press/e586f67403b8d30e37983ec61465bf93",
+            "publishedAt": "2025-11-28T17:33:18Z",
+            "content": "Thousands in Michigan are still without power, as some reported wind gusts reaching 60 mph Thanksgiving Day.\r\nThe majority of the more than 5,000 electric customers who have lost power are in the Upp\u2026 [+3112 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "'Going viral doesn't mean you're earning millions'",
+            "description": "Women in business can't complain about how little they make for fear of looking greedy, an academic says.",
+            "url": "https://www.bbc.com/news/articles/cx272dj04rno",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/4f3e/live/a2a339a0-ccad-11f0-8c06-f5d460985095.jpg",
+            "publishedAt": "2025-11-28T22:54:39Z",
+            "content": "Kate Morgan,Wales community correspondentand\r\nSian Elin Dafydd,BBC Wales\r\nZoe Trigwell says she feels a lot of pressure to be seen as perfect online as a woman in business\r\nAfter one of her make-up p\u2026 [+5166 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Lauren Feiner",
+            "title": "A nationwide internet age verification plan is sweeping Congress",
+            "description": "For years, lawmakers at the state and federal levels have tried a variety of measures aimed at making kids safer on the internet, from kids-tailored design standards to age verification for individual websites. More recently, a new model has caught on in the \u2026",
+            "url": "https://www.theverge.com/policy/830877/app-store-age-verification-act-pinterest-endorsement",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/07/STKS517_AGE_VERIFICATION_C.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+            "publishedAt": "2025-11-26T22:08:53Z",
+            "content": "<ul><li></li><li></li><li></li></ul>\r\nA nationwide internet age verification plan is sweeping Congress\r\nPinterest announced its endorsement of the federal version of a model thats already passed in s\u2026 [+8932 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Seths.blog"
+            },
+            "author": "Seth Godin",
+            "title": "Filtering ourselves",
+            "description": "We don\u2019t use the same language or ideas with an in-law that we do with our bar buddies. When the internet was young, people often chose to filter themselves online. We didn\u2019t know who was on the other end of the pipe, and we knew it would be there forever. An\u2026",
+            "url": "https://seths.blog/2025/12/filtering-ourselves/",
+            "urlToImage": "https://seths.blog/wp-content/uploads/2018/06/seth_godin_ogimages_v02_1806138-1.jpg",
+            "publishedAt": "2025-12-16T10:03:00Z",
+            "content": "We don\u2019t use the same language or ideas with an in-law that we do with our bar buddies.\r\nWhen the internet was young, people often chose to filter themselves online. We didn\u2019t know who was on the oth\u2026 [+718 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "TheStreet"
+            },
+            "author": "Patricia Battle",
+            "title": "Amazon to face growing boycott from angry consumers amid holidays",
+            "description": "Amazon, the largest online retailer in the world, is currently benefiting from growing demand, despite increasing economic concerns among consumers...",
+            "url": "https://www.thestreet.com/retail/amazon-to-face-growing-boycott-from-angry-consumers-amid-holidays",
+            "urlToImage": "https://media.zenfs.com/en/thestreet_881/8f790e4fb23b1688c95bf1a5521ec5a9",
+            "publishedAt": "2025-11-26T03:03:00Z",
+            "content": "Amazon, the largest online retailer in the world, is currently benefiting from growing demand, despite increasing economic concerns among consumers nationwide.\r\nDuring the third quarter of this year,\u2026 [+6424 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "JIM MUSTIAN and JACK BROOK",
+            "title": "Records reviewed by AP detail online monitoring, arrests in New Orleans immigration crackdown",
+            "description": "State and federal authorities are closely tracking online criticism and demonstrations against the immigration crackdown in New Orleans, monitoring message...",
+            "url": "https://www.yahoo.com/news/articles/records-reviewed-ap-detail-online-183548927.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/izacp2RhPQTTWCu4VcxN6A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/ap.org/f1bcea417acc2bd95ffa010ccb82c541",
+            "publishedAt": "2025-12-07T18:35:48Z",
+            "content": "NEW ORLEANS (AP) State and federal authorities are closely tracking online criticism and demonstrations against the immigration crackdown in New Orleans, monitoring message boards around the clock fo\u2026 [+7266 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "It's time to lock in and let your winter arc begin",
+            "description": "It helps you ignore distractions and achieve your goals - but how do you avoid burning out?",
+            "url": "https://www.bbc.com/news/articles/cm2w79447vvo",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/6544/live/07aa7660-cc4f-11f0-a892-01d657345866.jpg",
+            "publishedAt": "2025-11-30T00:03:07Z",
+            "content": "Dani compares locking in to tunnel vision and says it helps her get things done\r\nHave you ever locked in?\r\nNo, not finding yourself locked in a lift or a bathroom.\r\nWe're talking about locking IN - t\u2026 [+5611 chars]"
+        },
+        {
+            "source": {
+                "id": "abc-news",
+                "name": "ABC News"
+            },
+            "author": "Devin Dwyer",
+            "title": "Supreme Court hears billion-dollar battle over online piracy",
+            "description": "A case before the Supreme Court could determine whether internet service providers can be held financially liable for contributing to copyright infringement.",
+            "url": "https://abcnews.go.com/Politics/supreme-court-hears-billion-dollar-battle-online-piracy/story?id=127876678",
+            "urlToImage": "https://i.abcnewsfe.com/a/5c4514b7-72e2-4b04-9f2a-bc8011431cc6/sony-gty-er-251126_1764177126402_hpMain_16x9.jpg?w=1600",
+            "publishedAt": "2025-12-01T10:13:10Z",
+            "content": "As billions of people worldwide use the internet to illegally stream or download copyrighted material like music, movies and TV shows, the entertainment industry is trying to crack down on American i\u2026 [+2990 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "The Atlantic"
+            },
+            "author": "Jake Lundberg",
+            "title": "The Earliest Days of The Atlantic Online",
+            "description": "The year 1995 was full of flash art and wild optimism about the internet.",
+            "url": "https://www.theatlantic.com/newsletters/2025/11/atlantic-online-1995-early-internet/685004/",
+            "urlToImage": "https://cdn.theatlantic.com/thumbor/fOA_m2S1yiUDeroByDNMJaQK3EM=/0x42:2000x1084/1200x625/media/newsletters/2025/11/_PSD_Time_Travel_Thursdays_3/original.jpg",
+            "publishedAt": "2025-11-21T00:16:00Z",
+            "content": "This is an edition of Time-Travel Thursdays, a journey through The Atlantic\u2019s archives to contextualize the present. Sign up here.The Atlantic launched its website in November 1995, 138 years after i\u2026 [+6959 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Simon Sage",
+            "title": "Jeff Bezos sparks outrage after photos of newly renovated mansion surface online: 'This should be illegal'",
+            "description": "\"That\u2019s what happens when you give tax cuts to billionaires.\"",
+            "url": "https://www.yahoo.com/news/articles/jeff-bezos-sparks-outrage-photos-004500088.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/prGp0_gswW8D2QT57UdeVQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzY7Y2Y9d2VicA--/https://media.zenfs.com/en/the_cool_down_737/1a13a1761e88b2240540f1fa34cdb73d",
+            "publishedAt": "2025-12-07T00:45:00Z",
+            "content": "Amazon CEO Jeff Bezos has recently upgraded a Florida property while his larger nearby megamansion is under construction, according to Realtor.com.\r\nBezos' temporary $87 million home has had a wealth\u2026 [+2000 chars]"
+        },
+        {
+            "source": {
+                "id": "buzzfeed",
+                "name": "Buzzfeed"
+            },
+            "author": "Molly Wadzeck Kraus",
+            "title": "This 1 Controversial Request Doctors Make During Appointments With Teens Is Sparking Intense Debate Online",
+            "description": "\u201cNot a chance and not on your life,\" one person said of this request health professionals maintain is important for accurate treatment.",
+            "url": "https://www.buzzfeed.com/mollywadzeckkraus/controversial-request-doctors-parents-teens",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/fDa6aWlzJyEILMhYdnmaug--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03OTc7Y2Y9d2VicA--/https://media.zenfs.com/en/buzzfeed_articles_778/1323a325cf3e04047d73ff35fd01d996",
+            "publishedAt": "2025-11-29T14:00:02Z",
+            "content": "In a typical pediatrician visit, routine questions about sleep, appetite, and school follow discussions of vitals and growth charts.\r\n Mediaphotos / Getty Images\r\nBut as children grow into preteens a\u2026 [+8474 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": null,
+            "title": "El Paso County Sheriff\u2019s Office deputy\u2019s act of kindness draws praise online",
+            "description": null,
+            "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_d651b52c-6e9e-4052-86f7-baca49fd6b96",
+            "urlToImage": null,
+            "publishedAt": "2025-11-26T23:48:18Z",
+            "content": "If you click 'Accept all', we and our partners, including 240 who are part of the IAB Transparency &amp; Consent Framework, will also store and/or access information on a device (in other words, use \u2026 [+714 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Parade"
+            },
+            "author": "Carly Silva",
+            "title": "Photos of White House Christmas Decorations Stir Up Strong Reactions Online",
+            "description": "The White House has undergone some significant changes since last Christmas.",
+            "url": "https://parade.com/news/white-house-christmas-decorations-2025-photos-strong-reactions-online",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/qFuN3PqxL9k0xmS56KUO2Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/parade_250/0058c712f1297dd91772c37404fef821",
+            "publishedAt": "2025-12-02T22:33:25Z",
+            "content": "The White House is looking a little bit different this holiday season.\r\nSince last Christmas, the iconic U.S. landmark has undergone several changes, including some major new construction, and of cou\u2026 [+4206 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Reuters",
+            "title": "Key barrier to online fraud can be bypassed for pennies, say researchers",
+            "description": "WASHINGTON, Dec 11 (Reuters) - A central barrier to the creation of bogus social media accounts can be bypassed for as little as a few cents at a time...",
+            "url": "https://www.yahoo.com/news/articles/key-barrier-online-fraud-bypassed-190413387.html",
+            "urlToImage": "https://media.zenfs.com/en/reuters.com/fa0fa46b04cf66c93d4afc89c25785c5",
+            "publishedAt": "2025-12-11T19:08:38Z",
+            "content": "WASHINGTON, Dec 11 (Reuters) - A central barrier to the creation of bogus social media accounts can be bypassed for as little as a few cents at a time, researchers at the University of Cambridge dete\u2026 [+3614 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Kotaku"
+            },
+            "author": "Ethan Gach",
+            "title": "Ghost Of Yotei Dev Fired Over Charlie Kirk Joke Speaks Out: \u2018At No Point Did Anyone Ask Me To Apologize\u2019",
+            "description": "Sucker Punch cut ties amid an online harassment campaign\nThe post Ghost Of Yotei Dev Fired Over Charlie Kirk Joke Speaks Out: \u2018At No Point Did Anyone Ask Me To Apologize\u2019 appeared first on Kotaku.",
+            "url": "https://kotaku.com/sucker-punch-charlie-kirk-ghost-yotei-boycott-2000646987",
+            "urlToImage": "https://kotaku.com/app/uploads/2025/09/ghost-of-yotei.jpg",
+            "publishedAt": "2025-11-24T19:27:40Z",
+            "content": "Hundreds of people were fired for what they said about Charlie Kirk in the wake of his assassination earlier this year. Ex-Sucker Punch artist Drew Harrison was one of them. In her first interview si\u2026 [+2968 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Kotaku"
+            },
+            "author": "Kotaku Deals",
+            "title": "Identity Protection Service Drops 70% Off for Black Friday, Privacy Now Costs Almost Nothing",
+            "description": "Guard your life online for nearly free right now.\nThe post Identity Protection Service Drops 70% Off for Black Friday, Privacy Now Costs Almost Nothing appeared first on Kotaku.",
+            "url": "https://kotaku.com/identity-protection-service-drops-70-off-for-black-friday-privacy-now-costs-almost-nothing-2000646900",
+            "urlToImage": "https://kotaku.com/app/uploads/2025/11/identity-theft-protection-card.jpg",
+            "publishedAt": "2025-11-24T23:10:30Z",
+            "content": "Black Friday deals are everywhere right now and most of them are pretty forgettable. Another discount on headphones you don\u2019t need, a slightly cheaper subscription to a streaming service you already \u2026 [+4374 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Justin Carter",
+            "title": "The New \u2018Paranormal Activity\u2019 May Have Already Found Its Director",
+            "description": "A fresh new face with similar tastes could take the reigns for the return of 'Paranormal Activity.'",
+            "url": "https://gizmodo.com/the-new-paranormal-activity-may-have-already-found-its-director-2000699521",
+            "urlToImage": "https://gizmodo.com/app/uploads/2025/12/ParanormalActivity-1200x675.jpg",
+            "publishedAt": "2025-12-14T21:15:42Z",
+            "content": "At the top of December, Paramount revealed it was doing another\u00a0Paranormal Activity\u00a0flick with James Wan on hand as producer, and now they might\u2019ve landed a director for the gig.\r\nPer the Hollywood R\u2026 [+1279 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Lily Hay Newman",
+            "title": "Cloudflare Has Blocked 416 Billion AI Bot Requests Since July 1",
+            "description": "Cloudflare CEO Matthew Prince claims the internet infrastructure company\u2019s efforts to block AI crawlers are already seeing big results.",
+            "url": "https://www.wired.com/story/big-interview-event-matthew-prince-cloudflare/",
+            "urlToImage": "https://media.wired.com/photos/6931ffd30feef77a577bf95b/191:100/w_1280,c_limit/Matthew-Prince-Big-Interview-2025-5.jpg",
+            "publishedAt": "2025-12-04T22:04:31Z",
+            "content": "As the large language models powering generative AI tools slurp up ever more data across the web, Cloudflare cofounder and CEO Matthew Prince said at WIREDs Big Interview event in San Francisco on Th\u2026 [+2459 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Mark Keierleber",
+            "title": "Vaping Is \u2018Everywhere\u2019 in Schools\u2014Sparking a Bathroom Surveillance Boom",
+            "description": "Schools in the US are installing vape-detection tech in bathrooms to thwart student nicotine and cannabis use. A new investigation reveals the impact of using spying to solve a problem.",
+            "url": "https://www.wired.com/story/vaping-surveillance-school-bathrooms/",
+            "urlToImage": "https://media.wired.com/photos/6914c6fd0ce97495093bdab8/191:100/w_1280,c_limit/Surveillance-in-Bathrooms-for-Vaping-Security.jpg",
+            "publishedAt": "2025-11-19T10:00:00Z",
+            "content": "Its this creeping surveillance that gives some students pause, even those who told The 74 they otherwise support vape detectors in bathrooms. The possibility of unknown capabilities with the sensors \u2026 [+2079 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Maddy Varner",
+            "title": "Your Data Might Determine How Much You Pay for Eggs",
+            "description": "A newly enacted New York law requires retailers to say whether your data influences the price of basic goods like a dozen eggs or toilet paper, but not how.",
+            "url": "https://www.wired.com/story/algorithmic-pricing-eggs-ny-law/",
+            "urlToImage": "https://media.wired.com/photos/692e0e42fb164449491c36c8/191:100/w_1280,c_limit/GettyImages-545033995.jpg",
+            "publishedAt": "2025-12-02T19:10:21Z",
+            "content": "If youre near Rochester, New York, the price for a carton of Targets Good &amp; Gather eggs is listed as $1.99 on its website. If youre in Manhattans upscale Tribeca neighborhood, that price changes \u2026 [+2440 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Ban harmful content from social media instead of us, say Australian teens",
+            "description": "From 10 December, social media firms must ensure Australians aged under 16 cannot have accounts.",
+            "url": "https://www.bbc.com/news/articles/crrkw1p14eqo",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/5c30/live/8bdd6030-ca9e-11f0-a892-01d657345866.jpg",
+            "publishedAt": "2025-11-27T13:22:32Z",
+            "content": "Social media companies and the Australian government should be using their resources to remove predators and harmful content from platforms rather than banning under-16s, teenagers challenging the la\u2026 [+2411 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Matt Novak",
+            "title": "Telehealth Founder Convicted of Running Adderall Pill Mill",
+            "description": "\"This case represents one of the most egregious abuses of telehealth we\u2019ve seen.\"",
+            "url": "https://gizmodo.com/telehealth-founder-convicted-of-running-adderall-pill-mill-2000688666",
+            "urlToImage": "https://gizmodo.com/app/uploads/2024/06/304a6fd86995f7983b4e22dbf4593ab4.jpg",
+            "publishedAt": "2025-11-20T10:00:54Z",
+            "content": "A federal jury in San Francisco convicted two executives Tuesday at California-based telehealth company Done for their roles in illegally distributing Adderall and other stimulants online to patients\u2026 [+3767 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "AJ Dellinger",
+            "title": "Pornhub Begs Tech Giants to Verify User Ages on Their Device: Report",
+            "description": "We're moving closer to digital IDs.",
+            "url": "https://gizmodo.com/pornhub-begs-tech-giants-to-verify-user-ages-on-their-device-report-2000689044",
+            "urlToImage": "https://gizmodo.com/app/uploads/2025/07/pornhub-stock-art-1200x675.jpg",
+            "publishedAt": "2025-11-20T20:50:56Z",
+            "content": "Pornhub desperately needs someone to serve as a bouncer outside the club. The company reportedly sent letters to Apple, Google, and Microsoft recently pleading with the tech giants to help out with a\u2026 [+2978 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Bruce Gil",
+            "title": "Elon Musk Slapped With $140 Million Fine Over Deceptive Blue Checks on X",
+            "description": "The fine would put a big dent in one Musk's only revenue-generating moves after taking over Twitter.",
+            "url": "https://gizmodo.com/elon-musk-slapped-with-140-million-fine-over-deceptive-blue-checks-on-x-2000696215",
+            "urlToImage": "https://gizmodo.com/app/uploads/2024/10/GettyImages-2068281076.jpg",
+            "publishedAt": "2025-12-05T17:44:57Z",
+            "content": "Elon Musks attempt to turn blue checks into a revenue stream for X has hit a major hurdle.\r\nThe European Commission, the EUs executive branch responsible for enforcing the blocs laws, just hit X with\u2026 [+3290 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Lucas Ropek",
+            "title": "Letterboxd Is Launching Its Own Unique Take on a \u2018Video Store\u2019",
+            "description": "You'll be able to watch\u2014not just talk about\u2014movies.",
+            "url": "https://gizmodo.com/letterboxd-is-launching-its-own-unique-take-on-a-video-store-2000688542",
+            "urlToImage": "https://gizmodo.com/app/uploads/2023/09/6a7bc9aeae38880135eb7b9a71df8d52.jpg",
+            "publishedAt": "2025-11-19T22:10:14Z",
+            "content": "Letterboxd has long been the discursive mecca where film nerds go to share their online opinions about the movies they\u2019ve watched. Now, however, the platform appears to be trying to transform itself \u2026 [+2591 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Bruce Gil",
+            "title": "OpenAI, Anthropic, and Others Create Foundation for Standardizing AI Agents",
+            "description": "Microsoft, AWS, and Saleforce are also supporting the initiative.",
+            "url": "https://gizmodo.com/openai-anthropic-and-others-create-foundation-for-standardizing-ai-agents-2000697488",
+            "urlToImage": "https://gizmodo.com/app/uploads/2024/12/GettyImages-21653483551.jpg",
+            "publishedAt": "2025-12-09T23:05:59Z",
+            "content": "OpenAI, Anthropic, and Block have teamed up to co-found a new foundation that promises to help standardize the development of AI agents.\r\nThe new Agentic AI Foundation (AAIF) will operate under the l\u2026 [+2978 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "MICHELLE CHAPMAN",
+            "title": "Cloudflare outage disrupts ChatGPT, X, other internet services",
+            "description": "A widely used Internet infrastructure company is attempting to staunch outages that have impacted users of everything from ChatGPT and the online game...",
+            "url": "https://tech.yahoo.com/ai/chatgpt/articles/cloudflare-outage-disrupts-chatgpt-x-130738927.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/fDC95NL21sdWvDVc4Ov4QA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/ap.org/86ef473f38a8350673816a63c1eefdff",
+            "publishedAt": "2025-11-18T13:07:38Z",
+            "content": "A widely used Internet infrastructure company is attempting to staunch outages that have impacted users of everything from ChatGPT and the online game, League of Legends,\" to the New Jersey Transit s\u2026 [+1571 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "TheStreet"
+            },
+            "author": "Todd Campbell",
+            "title": "Popular bank closing half-dozen branches (locations revealed)",
+            "description": "It hasn't been easy for many businesses since Covid forced people inside and online in 2020, reshaping how we all shop and spend. Among the industries hit...",
+            "url": "https://www.thestreet.com/latest-news/popular-bank-to-close-half-dozen-branches-locations-revealed",
+            "urlToImage": "https://media.zenfs.com/en/thestreet_881/8cb7545554c27db10940eb9bd64f66a9",
+            "publishedAt": "2025-11-21T20:04:55Z",
+            "content": "It hasn't been easy for many businesses since Covid forced people inside and online in 2020, reshaping how we all shop and spend.\r\nAmong the industries hit hardest are retailers and banks, which have\u2026 [+8575 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "TheStreet"
+            },
+            "author": "Tony Owusu",
+            "title": "Tesla gets an answer for its FSD ambitions in Europe",
+            "description": "Tesla CEO Elon Musk has a loyal online following, so when Tesla instructed its followers to inundate the Dutch transit authority, Rijksdienst voor het...",
+            "url": "https://www.thestreet.com/automotive/tesla-gets-an-answer-for-its-fsd-ambitions-in-europe",
+            "urlToImage": "https://media.zenfs.com/en/thestreet_881/a1118586db0a66a25c9be9f048082f10",
+            "publishedAt": "2025-11-25T02:03:00Z",
+            "content": "Tesla CEO Elon Musk has a loyal online following, so when Tesla instructed its followers to inundate the Dutch transit authority, Rijksdienst voor het Wegverkeer (RDW), with messages to approve testi\u2026 [+2471 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "KIRSTEN GRIESHABER and CLAUDIA CIOBANU",
+            "title": "Sweden promises action against illegal sex doll sales",
+            "description": "The Swedish government promised on Friday to fight the sale of childlike sex dolls online after instances of such commerce had been reported earlier in the...",
+            "url": "https://www.yahoo.com/news/articles/sweden-promises-action-against-illegal-123836213.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/4eGBngMdEovcwvGPHCT3jw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03OTk7Y2Y9d2VicA--/https://media.zenfs.com/en/ap_finance_articles_694/adadf6f5451f8956b82ccd1ab502b9ba",
+            "publishedAt": "2025-11-28T12:38:36Z",
+            "content": "BERLIN (AP) The Swedish government promised on Friday to fight the sale of childlike sex dolls online after instances of such commerce had been reported earlier in the country.\r\nI think I react on be\u2026 [+3121 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "SETH BORENSTEIN",
+            "title": "EPA eliminates mention of fossil fuels in website on warming's causes. Scientists call it misleading",
+            "description": "The Environmental Protection Agency has removed any mention of fossil fuels \u2014 the main driver of global warming \u2014 from its popular online page explaining the...",
+            "url": "https://www.yahoo.com/news/articles/epa-eliminates-mention-fossil-fuels-213002570.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/lTBRTA9hvEjGkCoo43K3KQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/ap.org/8dd71a9b2b8c80bc18368daad4d8388b",
+            "publishedAt": "2025-12-09T21:30:02Z",
+            "content": "WASHINGTON (AP) The Environmental Protection Agency has removed any mention of fossil fuels the main driver of global warming from its popular online page explaining the causes of climate change. Now\u2026 [+4991 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Daily Beast"
+            },
+            "author": "Wiktoria Gucia",
+            "title": "Trump\u2019s Unposted Truth Social Draft Leaks From Oval Office",
+            "description": "President Donald Trump drafted a social media post on paper but never shared it online. In an Instagram story posted Friday, Eric Trump, 41, shared a photo...",
+            "url": "https://www.thedailybeast.com/trumps-unposted-truth-social-draft-leaks-from-oval-office/",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/fj7tlahbwH3kVG_2vgz11g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/thedailybeast.com/329358eaf73c254422d0bbd57846eacc",
+            "publishedAt": "2025-12-14T15:24:31Z",
+            "content": "President Donald Trump drafted a social media post on paper but never shared it online.\r\nIn an Instagram story posted Friday, Eric Trump, 41, shared a photo taken in the Oval Office showing his fathe\u2026 [+2348 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Shawn Henry",
+            "title": "Ferrari F40 Test Drive Ends in Dramatic Crash, Caught on Video",
+            "description": "A Ferrari F40, one of the most iconic supercars in automotive history, met a dramatic end during a routine test drive. A video that surfaced online captures ...",
+            "url": "https://autos.yahoo.com/people-and-culture/articles/ferrari-f40-test-drive-ends-173000809.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/YH5DudHE1U2y1UnD7oTl5A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/modern_car_collector_articles_878/c81b5bc91271d09c9fc649452983e22f",
+            "publishedAt": "2025-11-23T21:23:00Z",
+            "content": "A Ferrari F40, one of the most iconic supercars in automotive history, met a dramatic end during a routine test drive. A video that surfaced online captures the precise moment the car lost control, l\u2026 [+1486 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "WIVB.com - News 4"
+            },
+            "author": "Rob Petree",
+            "title": "Influencer stabbed in latest confrontation to catch alleged child predators in WNY",
+            "description": "BUFFALO, N.Y. (WIVB) \u2014 Niky Sal, an influencer leading an effort to catch alleged child predators online in Western New York, was hospitalized after being...",
+            "url": "https://www.wivb.com/news/local-news/western-new-york/chautauqua-county/jamestown/influencer-stabbed-in-latest-confrontation-to-catch-alleged-child-predators-in-wny/",
+            "urlToImage": "https://media.zenfs.com/en/wivb_articles_998/d6047d3700982fc8ae54257d8f7620ca",
+            "publishedAt": "2025-12-15T00:10:59Z",
+            "content": "BUFFALO, N.Y. (WIVB) Niky Sal, an influencer leading an effort to catch alleged child predators online in Western New York, was hospitalized after being stabbed in his latest encounter in Jamestown.\r\u2026 [+2838 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Dylan Stableford",
+            "title": "Cloudflare outage disrupts internet, causing X, ChatGPT to be down for some users",
+            "description": "The cloud-based internet security and services provider said it was investigating an outage that disrupted online activity for several popular websites and...",
+            "url": "https://www.yahoo.com/news/article/cloudflare-outage-disrupts-internet-causing-x-chatgpt-to-be-down-for-some-users-141316284.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/buhtE6nZm5e3sTS7gvCk5A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MzU7Y2Y9d2VicA--/https://d29szjachogqwa.cloudfront.net/images/user-uploaded/xAP22243655799089.jpg",
+            "publishedAt": "2025-11-18T14:13:16Z",
+            "content": "Cloudflare, a cloud-based internet security and services provider, said it was investigating an outage that disrupted online activity for several popular websites and apps, including X and the AI cha\u2026 [+928 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "FOX 31 Denver"
+            },
+            "author": "Jacob Factor",
+            "title": "Denver officials: Pouring bleach on unlicensed taco vendor\u2019s food was \u2018necessary\u2019",
+            "description": "A video that went viral online earlier this week showed an apparent Denver Department of Public Health and Environment employee pouring bleach on a street...",
+            "url": "https://kdvr.com/news/local/denver-officials-pouring-bleach-on-unlicensed-taco-vendors-food-was-necessary/",
+            "urlToImage": "https://media.zenfs.com/en/kdvr_denver_articles_499/675dea425a6b81d716afd0a95994a768",
+            "publishedAt": "2025-11-19T15:24:44Z",
+            "content": "DENVER (KDVR) A video that went viral online earlier this week showed an apparent Denver Department of Public Health and Environment employee pouring bleach on a street vendors food, and officials ar\u2026 [+3383 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "KFSN-TV"
+            },
+            "author": "Gabe Ferris",
+            "title": "Porterville teen one of 28 charged nationwide in connection with extremist group '764'",
+            "description": "A Porterville teen is one of 28 people recently charged by the Department of Justice for his alleged connection to an online extremist group.",
+            "url": "https://abc30.com/post/porterville-teen-28-charged-nationwide-connection-extremist-group-764/18171350/",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/nKu2st5ZbQMvBR8PI.EsmA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU7Y2Y9d2VicA--/https://media.zenfs.com/en/kfsn_articles_810/9ee6951c0ba710c94a2f65fcc27985b2",
+            "publishedAt": "2025-11-19T02:17:33Z",
+            "content": "A Porterville teen is one of 28 people recently charged by the Department of Justice for his alleged connection to an online extremist group.\r\nIn a six-page indictment filed by prosecutors, Tony Long\u2026 [+2057 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Whereisthebuzz.com"
+            },
+            "author": "Terra Watts",
+            "title": "Meet Randi Nicole Staples: 44-Year-Old Mom Fired and Arrested After Viral Video Shows Her Be*ting Son With a Belt",
+            "description": "A teacher was arrested after a disturbing video appeared online showing his beating of one of his students. WPMI-TV reported Randi Nicole Staples is 44-years...",
+            "url": "https://whereisthebuzz.com/meet-randi-nicole-staples-44-year-old-mom-fired-and-arrested-after-viral-video-shows-her-beting-son-with-a-belt/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=meet-randi-nicole-staples-44-year-old-mom-fired-and-arrested-after-viral-video-shows-her-beting-son-with-a-belt",
+            "urlToImage": "https://media.zenfs.com/en/where_is_the_buzz_814/02fe2193582aaeb3e11dd43c1b7442fa",
+            "publishedAt": "2025-11-20T16:36:55Z",
+            "content": "A teacher was arrested after a disturbing video appeared online showing his beating of one of his students.\r\nWPMI-TV reported Randi Nicole Staples is 44-years-old and is a 2nd-grade teacher at Cottag\u2026 [+2676 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Michelle Lynn Kahn, University of Richmond",
+            "title": "Far-right extremists have been organizing online since before the internet \u2013 and AI is their next frontier",
+            "description": "Neo-Nazis and other far-right extremists were early adopters of bulletin board systems, pioneering online recruiting and radicalization techniques long...",
+            "url": "https://www.yahoo.com/news/articles/far-extremists-organizing-online-since-133222351.html",
+            "urlToImage": "https://media.zenfs.com/en/the_conversation_us_articles_815/05feb4d13c317d715b55dd3bc3f16210",
+            "publishedAt": "2025-12-05T13:32:22Z",
+            "content": "How can society police the global spread of online far-right extremism while still protecting free speech? Thats a question policymakers and watchdog organizations confronted as early as the 1980s an\u2026 [+5992 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "By Ju-min Park",
+            "title": "Top South Korean e-commerce firm Coupang apologises over massive data breach",
+            "description": "By Ju-min Park SEOUL, Nov 30 (Reuters) - South Korea's biggest online retailer, Coupang, apologised on Sunday over the breach of personal information from...",
+            "url": "https://www.yahoo.com/news/articles/top-south-korean-e-commerce-082142553.html",
+            "urlToImage": "https://media.zenfs.com/en/reuters.com/c5ab3a52cfec8140972d2bad602960ef",
+            "publishedAt": "2025-11-30T08:21:42Z",
+            "content": "By Ju-min Park\r\nSEOUL, Nov 30 (Reuters) - South Korea's biggest online retailer, Coupang, apologised on Sunday over the breach of personal information from 33.7 million customer accounts through unau\u2026 [+1742 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Associated Press",
+            "title": "Myanmar state television broadcasts army crackdown on scam centers",
+            "description": "Myanmar\u2019s military government has begun broadcasting extensive video on state television of its crackdown on online scam centers, showing buildings being...",
+            "url": "https://www.yahoo.com/news/articles/myanmar-state-television-broadcasts-army-125108636.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/P9SQPrWv3d7grdQOaLIu6w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/ap.org/ac7aa92a5307ebcede786d825e748acd",
+            "publishedAt": "2025-11-24T12:51:08Z",
+            "content": "BANGKOK (AP) Myanmars military government has begun broadcasting extensive video on state television of its crackdown on online scam centers, showing buildings being bulldozed and over 1,000 foreigne\u2026 [+2953 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Sumit Singh",
+            "title": "Costco Membership Fees Surge in 2025: What Investors Should Track Next",
+            "description": "COST ends fiscal 2025 strong with a 14% jump in membership fee income, even as renewal rates soften amid rising online sign-ups.",
+            "url": "https://finance.yahoo.com/news/costco-membership-fees-surge-2025-142000361.html",
+            "urlToImage": "https://media.zenfs.com/en/zacks.com/16f17f50f87adebfdd2d6cecc68cd205",
+            "publishedAt": "2025-11-24T14:20:00Z",
+            "content": "Costco Wholesale Corporation COST concluded fiscal 2025 on an upbeat note, with membership fee income rising 14% to $1,724 million in the fourth quarter, marking one of the solid increases in recent \u2026 [+2548 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Associated Press",
+            "title": "Wisconsin woman in 2014 Slender Man stabbing is missing",
+            "description": "A Wisconsin woman who admitted to nearly stabbing a classmate to death in 2014 to please the online horror character Slender Man is missing after she cut off...",
+            "url": "https://www.yahoo.com/news/articles/wisconsin-woman-2014-slender-man-202855984.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/WNbzvu6z501FqgekXpCXXA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/ap.org/a39c0631995dccc147aec6661bbc5798",
+            "publishedAt": "2025-11-23T20:28:55Z",
+            "content": "MADISON, Wis. (AP) A Wisconsin woman who admitted to nearly stabbing a classmate to death in 2014 to please the online horror character Slender Man is missing after she cut off an electronic monitori\u2026 [+1523 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "WSBTV.com News Staff",
+            "title": "Cinnabon employee fired for racist comments made to customers seen on video",
+            "description": "A Cinnabon employee no longer has a job after a video of racist comments made to customers surfaced online. The incident happened last week at a Cinnabon...",
+            "url": "https://www.yahoo.com/news/articles/cinnabon-employee-fired-racist-comments-101047864.html",
+            "urlToImage": "https://media.zenfs.com/en/wsb_cox_articles_232/1d56292085f2cadc6ae68be723eb79c4",
+            "publishedAt": "2025-12-09T10:21:08Z",
+            "content": "A Cinnabon employee no longer has a job after a video of racist comments made to customers surfaced online.\r\nThe incident happened last week at a Cinnabon stand at the Bay Park Square Mall in Wiscons\u2026 [+1059 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Eve",
+            "title": "Overheated Corvette Video Turns Routine Shoot Into Cautionary Car-Care Moment",
+            "description": "A recent video circulating online has highlighted a basic but critical rule of vehicle maintenance after an overheating C6 Corvette became the center of an...",
+            "url": "https://autos.yahoo.com/safety-and-recalls/articles/overheated-corvette-video-turns-routine-154500531.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/l6JEHdeAOOxetYZ95Bqacg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/the_auto_wire_articles_747/f4225dd6593806ad86be8eaa78a397e2",
+            "publishedAt": "2025-12-12T15:45:00Z",
+            "content": "A recent video circulating online has highlighted a basic but critical rule of vehicle maintenance after an overheating C6 Corvette became the center of an unexpected safety scare. The footage, captu\u2026 [+1855 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Tom Warren",
+            "title": "Microsoft\u2019s ugly sweaters return with Clippy, Xbox, and Zune brown options",
+            "description": "Microsoft is bringing back its ugly sweaters for the holiday season. After taking a break for 2024, the company has an \u201cArtifact\u201d holiday sweater with lots of retro iconography, as well as an even uglier Zune brown option and even a green Xbox version. Clippy\u2026",
+            "url": "https://www.theverge.com/news/835130/microsoft-ugly-sweater-clippy-zune-brown-xbox",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/uglysweaters.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+            "publishedAt": "2025-12-01T19:03:22Z",
+            "content": "<ul><li></li><li></li><li></li></ul>\r\nAll three holiday sweaters can be purchased at Microsofts company store.\r\nAll three holiday sweaters can be purchased at Microsofts company store.\r\nby\r\nTom Warre\u2026 [+2335 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Ash Parrish",
+            "title": "In Kirby Air Riders, expression is more fun than racing",
+            "description": "Hear me out: Kirby Air Riders isn't a racing game, it's an art tool with a racing game tacked on. The game, out now for the Nintendo Switch 2, is the follow-up to the quirky Kirby-flavored kart racer released in 2003 on the GameCube. It features Smash Bros. c\u2026",
+            "url": "https://www.theverge.com/games/826488/kirby-air-riders-nintendo-switch-2-vehicle-customization",
+            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/Switch2_KirbyAirRiders_scrn_03.png?quality=90&strip=all&crop=0%2C3.4613147178592%2C100%2C93.077370564282&w=1200",
+            "publishedAt": "2025-11-21T20:09:34Z",
+            "content": "<ul><li></li><li></li><li></li></ul>\r\nWhy race when theres fashion to be made?\r\nWhy race when theres fashion to be made?\r\nby\r\nAsh ParrishClose\r\nAsh Parrish\r\nPosts from this author will be added to yo\u2026 [+4453 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "heise online"
+            },
+            "author": "Ulrich Wolf",
+            "title": "Online-Register zur Beschaffung eur\u00f6pischer Software",
+            "description": "Ein neues Register soll k\u00fcnftig bei der Beschaffung europ\u00e4ischer Software und IT-Dienstleistungen helfen. F\u00fcr Anbieter und Bedarfstr\u00e4ger soll es kostenlos sein.",
+            "url": "https://www.heise.de/news/Online-Register-zur-Beschaffung-euroepischer-Software-11083285.html",
+            "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/9/8/0/0/9/3/2024-05-15-BingDesigner-Euro_Cloud-2-2160px-a744390351fc180f.png",
+            "publishedAt": "2025-11-18T13:55:00Z",
+            "content": "Am Rande des Digitalgipfels in Berlin k\u00fcndigten Dennis-Kenji Kipker und Michael Littger vom Frankfurter Cyberintelligence Institute (CII) eine Initiative an, um ein Register souver\u00e4ner Software zu sc\u2026 [+1985 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "heise online"
+            },
+            "author": "Moritz F\u00f6rster",
+            "title": "Collabora bringt Online-Suite als Desktop-Anwendung",
+            "description": "Collabora ver\u00f6ffentlicht seine Office-Suite nun auch als Desktop-Anwendung. Die nutzt Web-Technik statt des klassischen Toolkits.",
+            "url": "https://www.heise.de/news/Collabora-bringt-Online-Suite-als-Desktop-Anwendung-11092872.html",
+            "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/9/8/5/0/0/8/Collabora-Office-New-Desktop-25.04-2048x1152-55ff3c58768a0a7c.png",
+            "publishedAt": "2025-11-26T14:25:00Z",
+            "content": "Collabora hat eine Desktop-Version seiner bisher als Web-Anwendung ver\u00f6ffentlichten Office-Suite Collabora Online vorgestellt. Dabei setzt Collabora Office Desktop auf die gleiche Web-Technik wie die\u2026 [+3126 chars]"
+        }
+    ]
 }

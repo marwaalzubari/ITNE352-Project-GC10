@@ -284,7 +284,7 @@ def handle_client(conn, addr):
 
                 #  sub option (1.1 ) Search by keyword
                 if sub_option == "1.1":
-                    conn.send("SEND_KEYWORD".encode())
+                    conn.send("SEND_KEYWORD".encode()) 
                     keyword = conn.recv(1024).decode().strip()
 
                     log_request(client_name, "1.1 Headlines Keyword", {"keyword": keyword})
